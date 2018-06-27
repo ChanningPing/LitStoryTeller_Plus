@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <link href="static/js/multipleLine/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        font: 9px sans-serif;
+        color: #121401;
+      }
+      .axis path,
+      .axis line {
+        fill: none;
+        stroke: #121401;
+        stroke-width: 2px;
+        shape-rendering: crispEdges;
+      }
+
+        table, td, th {
+            border: 1px solid black;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 20px;
+        }
+
+        th {
+            height: 50px;
+        }
+
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {background-color:#f5f5f5;}
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table {
+            position: absolute;
+            left: 200px;
+            top: 3000px;
+        }
+
+        tr:nth-child(even){background-color: #f2f2f2}
+
+
+        tr:nth-child(even){background-color: #f2f2f2}
+
+        th {
+            background-color: #1f77b4;
+            color: white;
+        }
+
+    </style>
+  </head>
+  <body>
+    <h2 style="padding-left:60px;">Storylines of Paper Collection</h2>
+    <script src="https://d3js.org/d3-axis.v1.min.js"></script>
+
+    <script src="static/js/multipleLine/jquery.js"></script>
+    <script src="static/js/multipleLine/d3.js"></script>
+
+    <script src="static/js/multipleLine/bootstrap.js"></script>
+    <script src="static/js/multipleLine/chart.js"></script>
+    <script>
+
+
+
+      var margin = {top: 20, right: 55, bottom: 30, left: 200},
+          width  = 3000 - margin.left - margin.right,
+          height = 2500  - margin.top  - margin.bottom;
+      var x = d3.scale.ordinal()
+          .rangeRoundBands([0, width], .1);
+      var y = d3.scale.linear()
+          .rangeRound([100, height]);
+
+      //new add
+      var force = d3.layout.force()
+        .charge(-1000)
+        .gravity(0.2)
+        .linkDistance(30)
+        .size([width, height])
+
+
+
+
+      var line = d3.svg.line()
+          .interpolate("cardinal")
+          .x(function (d) { return x(d.label) + x.rangeBand() / 2; })
+          .y(function (d) { return y(d.value); })
+          .defined(function(d) { return !isNaN(d.value); })
+          ;
+
+
+
+
+
+
+
+
+      var svg = d3.select("body").append("svg")
+          .attr("width",  width  + margin.left + margin.right)
+          .attr("height", height + margin.top  + margin.bottom)
+        .append("g")
+          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+      var fileName='static/data/multiLine_no_missing_1.csv';
+      d3.csv(fileName, function (error, data) {
+          console.log('This is data')
+        console.log(data)
+        var labelVar = 'quarter'; //name of the year (or paper)
+          //get all variable name other than 'quarter' (character names)
+        var varNames = d3.keys(data[0]).filter(function (key) { return key !== labelVar;}); //varNames = character names
+
+
+
+
+        character_weights = {{ character_weights | safe }};
+
+        var seriesData = varNames.map(function (name) {
+          return {
+            name: name,
+            line_weight:   character_weights[name],
+            values: data.map(function (d) {
+              return {name: name, label: d[labelVar], value: +d[name], weight: character_weights[name]};
+            })
+          };
+        });
+        console.log('This is series data')
+        console.log(seriesData)
+
+        //new added
+          var line_data = varNames.map(function (name) {
+          return data.map(function (d) {
+              return {name: name, label: d[labelVar], value: +d[name]};
+            })
+        });
+
+        console.log('This is line_data')
+
+        console.log(line_data)
+
+
+
+          //original method for color scale
+        var color = d3.scale.ordinal()
+          .range([//d3.rgb('#aec7e8'),d3.rgb('#1f77b4'),
+
+                   d3.rgb("#c70e55"),d3.rgb("#f577a8"),
+                  d3.rgb("#17becf"), d3.rgb('#2ca02c'),
+
+                  d3.rgb("#552b9c"),d3.rgb("#e5b700"),
+                  d3.rgb("#ffad9e"),d3.rgb("#2b399c"),
+                  d3.rgb("#ccdd22"),d3.rgb("#008072"),
+                  d3.rgb("#bcbd22"), d3.rgb('#e377c2'),
+                  d3.rgb("#c5b0d5"), d3.rgb('#98df8a'),
+
+                  d3.rgb("#ff9896"), d3.rgb('#9edae5'),
+
+
+                    d3.rgb("#66ccff"), d3.rgb('#7733ff'),
+
+
+
+                   d3.rgb("#616161"),d3.rgb("#644739"),
+
+                  d3.rgb("#990099"),d3.rgb("#0099c6"),
+
+                  // d3.rgb("#9b9999"),d3.rgb("#393939"),
+                    d3.rgb("#d62728"), d3.rgb('#17becf'),
+
+                   d3.rgb("#f4e300"),d3.rgb("#3de1ff")
+          ]);
+         color.domain(varNames); //assgin colors to characters
+
+          //new method for color scale
+          /*
+
+      var color = d3.scale.linear()
+          .domain([0,seriesData.length])
+          //.interpolate(d3.interpolateHcl)
+          .range(['#d73027', '#1a9850' ])
+          .interpolate(d3.interpolateHcl)
+          ;
+
+    for (var i = 0; i < seriesData.length; i++) {
+        for (var j = 0; j < seriesData[i].values.length; j++) {
+            seriesData[i].values[j].color = color(i);
+        }
+         seriesData[i].color = color(i);
+
+    }*/
+    console.log('add color data')
+    console.log(seriesData)
+
+
+
+
+        console.log('This is seriesData')
+        console.log(seriesData)
+
+
+          //new add get axis data
+        intro_y = []
+        intro_name = []
+          i = 0
+          for (var key in data[0]) {
+            // check if the property/key is defined in the object itself, not in parent
+            if (key!='quarter' ) {
+                intro_y[i] = data[0][key]
+                intro_name[i] = key
+                i++;
+            }
+        }
+        var xAxis = d3.svg.axis()
+          .scale(x)
+
+         // .orient("top");
+      var yAxis = d3.svg.axis()
+          .scale(y)
+          .orient("left")
+          .ticks(0)
+          //.tickValues(intro_y)
+          //.tickFormat(function(d,i){ return intro_name[i]})
+          ;
+
+
+
+        //range of x-axis
+        x.domain(data.map(function (d) { return d.quarter; }));
+        y.domain([
+          d3.min(seriesData, function (c) {
+            return d3.min(c.values, function (d) { return d.value; });
+          }),
+          d3.max(seriesData, function (c) {
+            return d3.max(c.values, function (d) { return d.value; });
+          })
+        ]);
+
+
+                    //add rectangle for community
+        rectangle_data = [
+            {'x': 120, 'y':100, 'width':18, 'height':60},
+            {'x': 260, 'y':400, 'width':18, 'height':80},
+        ]
+
+        rectangle_data = {{ rectangle_data | safe }}
+          console.log('this is rectangle_dadta')
+          console.log(rectangle_data)
+
+        var rects = svg.selectAll(".rect")
+            .data(rectangle_data)
+          .enter().append("g")
+            .attr("class", "rect");
+            rects.append("rect")
+            .attr("rx", 6)
+            .attr("ry", 6)
+            .attr("x", function (d) { return x(d.label) + x.rangeBand()/2 - d.weight/2; })
+            .attr("y", function (d) { return y (d.value ); })
+            .attr("width", function(d){return d.weight})
+            .attr("height", function (d) { return  y(d.height ); })
+            .style("stroke", "#7f7f7f")
+            .style("opacity", 0.3)
+            .style("fill", "#c7c7c7")
+
+            //.attr("transform", function(d, i) { return "scale(" + (1 - d / 25) * 20 + ")"; })
+            ;
+
+
+
+
+
+        svg.append("g")
+            .attr("class", "x axis")
+            .style("font", "18px times")
+            .attr("transform", "translate(0," + 0 + ")")
+            .call(xAxis)
+        .selectAll(".tick text") //new add for auto wrap
+      .call(wrap, 250)//new add for auto wrap
+        ;
+
+
+
+        svg.append("g")
+            .attr("class", "y axis")
+            .call(yAxis)
+
+          .append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 6)
+            .attr("dy", ".71em")
+            .style("text-anchor", "end")
+            //.text("entity names")
+             ;
+        var series = svg.selectAll(".series")
+            .data(seriesData)
+          .enter().append("g")
+            .attr("class", "series");
+
+// add for wrap paper title of each yeaer
+function wrap(text, width) {
+  text.each(function() {
+    var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        y = text.attr("y"),
+        dy = parseFloat(text.attr("dy")),
+        tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
+    while (word = words.pop()) {
+      line.push(word);
+      tspan.text(line.join(" "));
+      if (tspan.node().getComputedTextLength() > width) {
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+      }
+    }
+  });
+}
+
+function type(d) {
+  d.value = +d.value;
+  return d;
+}
+
+
+
+
+
+
+    var max_value = 0
+    for (var i = 0; i < seriesData.length; i++) {
+
+            if(seriesData[i].line_weight > max_value){
+                max_value = seriesData[i].line_weight
+            }
+
+
+    }
+
+
+
+        series.append("path")
+          .attr("class", "line")
+          .attr("d", function (d) { return line(d.values); }) //original
+          .style("stroke", function (d) { return color(d.name); }) //original
+          // .style("stroke-opacity",function (d) { return d.line_weight / max_value - 0.1; })
+            .style("stroke-opacity",0.5)
+           // .style("stroke", function (d) { return d.color; })
+          //.style("stroke-width", "4px")
+            .style("stroke-width", function(d){return d.line_weight;})
+          .style("fill", "none")
+
+
+
+
+
+
+         var points = series.selectAll(".point")
+          .data(function (d) { return d.values; })
+          .enter().append("circle")
+            .attr("class", "point")
+            .filter(function(d){ return !isNaN(d.value); }) // new add
+            .attr("cx", function (d) { return x(d.label) + x.rangeBand()/2; })
+           .attr("cy", function (d) { return y(d.value); })
+
+           //.attr("r", "5px")
+             .attr("r", function(d){return d.weight ;})
+           .style("fill", function (d) { return color(d.name); })
+             //  .style("fill",    d3.scale.category20b())
+             //.style("fill", function (d) { return d.color; })
+           .style("stroke", "grey")
+           .style("stroke-width", "2px")
+           .on("mouseover", function (d) { showPopover.call(this, d); })
+           .on("mouseout",  function (d) { removePopovers(); })
+
+
+          .call(force.drag)
+          .on("mousedown", function() { d3.event.stopPropagation(); });
+
+
+
+          //add label to each node in the graph
+          series.selectAll('text')
+              .data(function (d) { return d.values; })
+          .enter().append("text")
+            .filter(function(d){ return !isNaN(d.value); }) // new add
+            .attr("x", function (d) { return x(d.label) + x.rangeBand()/2 - 20; })
+            .attr("y", function (d) { return y(d.value); })
+            .attr("dy", ".35em")
+            .style("text-anchor", "end")
+            .style("font-size", "17")
+            .text(function (d) { return d.name; });
+
+
+
+
+        var legend = svg.selectAll(".legend")
+            .data(varNames.slice().reverse())
+          .enter().append("g")
+            .attr("class", "legend")
+            .attr("transform", function (d, i) { return "translate(55," + i * 20 + ")"; });
+        legend.append("rect")
+            .attr("x", width - 10)
+            .attr("width", 10)
+            .attr("height", 10)
+            .style("fill", color)
+            .style("stroke", "grey");
+        legend.append("text")
+            .attr("x", width - 12)
+            .attr("y", 6)
+            .attr("dy", ".35em")
+            .style("text-anchor", "end")
+            .text(function (d) { return d; });
+
+
+
+
+
+
+
+
+
+
+
+    		// second render pass for the dashed lines
+
+          //define a new line variable
+          var dashLine = d3.svg.line()
+                .interpolate("cardinal-closed")
+                .defined(function(d) { return !isNaN(d.value); })
+                .x(function(d) { return x(d.label) + x.rangeBand() / 2; })
+                .y(function(d) { return y(d.value); })
+                .style("opacity", 0.5);
+
+           //scan each entry, and connect null entries
+
+            for (var i = 0; i < seriesData.length; i += 1) {
+                var left = null
+                var right = null
+                var start = 0
+                for (var j = 0; j < seriesData[i].values.length; j += 1) {
+                      var current = seriesData[i].values[j]
+                      if (!isNaN(current.value)) {
+                        left = current
+                          start = j
+                      } else {
+                        // find the next value which is not nan
+
+                        while (j < seriesData[i].values.length && isNaN(seriesData[i].values[j].value)) j += 1
+
+                          if (j - start > 1){
+                            right = seriesData[i].values[j]
+                        }else{
+                            right = null
+                        }
+                          //test
+                        if ( left!=null && right!=null){
+                              console.log('left and right')
+                              console.log(left)
+                              console.log(right)
+                        }
+
+                        if (left!=null && right!=null &&(!isNaN(left.value)) &&  (!isNaN(right.value))){
+
+                          series.append("path")
+                            .attr("class", "line")
+                            .attr("d", dashLine([left, right]))
+                            .style("stroke",  function (d) { return color(left.name); })
+                            .attr('stroke-dasharray', '5, 5')
+
+
+
+                        }
+                       j -= 1
+
+                      }
+
+                    }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function removePopovers () {
+          $('.popover').each(function() {
+            $(this).remove();
+          });
+        }
+        function showPopover (d) {
+          $(this).popover({
+            title: d.name,
+            placement: 'auto top',
+            container: 'body',
+            trigger: 'manual',
+            html : true,
+            content: function() {
+              return "Article: " + d.label +
+                    // "<br/>Importance: " + d3.format(",")(d.value ? d.value: d.y1 - d.y0); }
+                     "<br/>Importance: " + d3.format(",")(d.weight? d.weight: 0); }
+          });
+          $(this).popover('show')
+        }
+      });
+    </script>
+
+    <table width="3000">
+        <col width="10%">
+        <col width="5%">
+        <col width="5%">
+        <col width="10%">
+        <col width="70%">
+        <tr>
+            <th>Article</th>
+            <th>Sentence id</th>
+            <th>Score</th>
+            <th>Entities</th>
+            <th>Sentence</th>
+        </tr>
+    </table>
+    <script type="text/javascript">
+
+
+
+
+
+          $(document).ready(function () {
+                var json = {{ summary | safe }}
+                var tr;
+                for (var i = 0; i < json.length; i++) {
+                    if (json[i].summary.length > 0){
+                        tr = $('<tr/>');
+                        tr.append("<td rowspan='" + json[i].summary.length + "'>" + json[i].article + "</td>");
+                        tr.append("<td>" + json[i].summary[0].s_id + "</td>");
+                        tr.append("<td>" + json[i].summary[0].score + "</td>");
+                        tr.append("<td>" + json[i].summary[0].entities + "</td>");
+                        tr.append("<td>" + json[i].summary[0].sentence + "</td>");
+                        $('table').append(tr);
+
+                        for (var j = 1; j < json[i].summary.length; j++) {
+                            tr = $('<tr/>');
+                            tr.append("<td>" + json[i].summary[j].s_id + "</td>");
+                            tr.append("<td>" + json[i].summary[j].score + "</td>");
+                            tr.append("<td>" + json[i].summary[j].entities + "</td>");
+                            tr.append("<td>" + json[i].summary[j].sentence + "</td>");
+                            $('table').append(tr);
+                        }
+                    }
+
+
+                }
+          });
+
+
+    </script>
+
+
+
+
+  </body>
+</html>

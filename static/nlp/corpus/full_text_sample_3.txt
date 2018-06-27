@@ -1,0 +1,978 @@
+Watching Together: Integrating Text Chat with Video
+ABSTRACT
+Watching video online is becoming increasingly popular,
+and new video streaming technologies have the potential to
+transform video watching from a passive, isolating
+experience into an active, socially engaging experience.
+However, the viability of an active social experience is
+unclear: both chatting and watching video require attention,
+and may interfere with one another and detract from the
+experience. In this paper, we empirically examine the
+activity of chatting while watching video online. We
+examine how groups of friends and strangers interact, and
+find that chat has a positive influence on social
+relationships, and people chat despite being distracted. We
+discuss the benefits and opportunities provided by mixing
+chat and video, uncover some of the attentional and social
+challenges inherent in this combination of media, and
+provide guidance for structuring the viewing experience.
+Author Keywords
+Video, interactive television, social TV, chat, strangers,
+friends.
+ACM Classification Keywords
+H.5.3 Group and Organization Interfaces – synchronous
+interaction.
+INTRODUCTION
+Watching video online is becoming an extremely popular
+activity. Google Video and YouTube allow people to watch
+hundreds of thousands of user-contributed videos, as well
+as rate them and leave comments. Some video content is
+even being produced specifically for the Internet [12], and
+recently, traditional media companies such as ABC and
+CBS have been experimenting with streaming television
+shows online (e.g. http://abc.go.com/fes). Movies are
+moving online as well, with Lycos Cinema allowing users
+to watch movies and chat with other users in their screening
+rooms (http://cinema.lycos.com). Finally, new media
+companies such as ManiaTV.com produce television solely
+for the Internet, coupled with real-time chat.
+However, despite the growing popularity of online video,
+and especially video-centered interactions, to our
+knowledge there is no research that examines how people
+experience video broadcasts with real-time chat.
+Conversation is one of life’s most enjoyable experiences,
+but it also consumes considerable attentional resources.
+Anyone who has attempted to watch a movie while others
+are talking knows of the effort in, and distraction that
+results from, trying to listen to the dialogue, follow the
+story line, and listen to (or fend off) the chatter of others.
+In this paper, we report our studies of people’s experience
+of watching videos online, while simultaneously chatting
+with others using a text chat feature. We asked if user
+experience and relationships would be enhanced or harmed
+by this activity. If interactions are interwoven with
+watching video, will viewers be able to submerge
+themselves in the video? Will social interaction be fun
+because of the shared viewing experience, or will it just be
+annoying? How might the video experience be structured to
+leverage both watching and chatting?
+We find these questions important to HCI for several
+reasons. First, HCI has a history of interest in the human
+capacity for processing parallel streams of information, and
+in understanding the effects of interruption on computer use
+experiences (e.g. [7]). Second, the effect of shared video
+watching on relationships has direct implications on the
+potential to use this computer-mediated communications
+tool to build social capital [19]. Finally, the nature of our
+study yields design implications for those who have already
+deployed chat with video systems.
+We conducted two studies to investigate watching and
+chatting. The first was an exploratory study designed to
+answer some preliminary questions about live video and
+chat. Would people chat during a movie? Do they enjoy the
+experience, or find it too distracting? From this study, we
+learned that people do chat, and chat is distracting while
+watching a movie. Our second study evaluated two methods
+of reducing distraction: inserting intermissions in between
+video content, or reserving a period for discussion after the
+video. This study also examined the social experience of
+Permission to make digital or hard copies of all or part of this work for
+personal or classroom use is granted without fee provided that copies are
+not made or distributed for profit or commercial advantage and that copies
+bear this notice and the full citation on the first page. To copy otherwise,
+or republish, to post on servers or to redistribute to lists, requires prior
+specific permission and/or a fee.
+CHI 2007, April 28–May 3, 2007, San Jose, California, USA.
+Copyright 2007 ACM 978-1-59593-593-9/07/0004...$5.00.
+CHI 2007 Proceedings • Video April 28-May 3, 2007 • San Jose, CA, USA
+877
+watching together: how are people's relationships affected,
+is this an activity that promotes conversation among
+strangers, and how does conversation affect evaluations of
+the video itself? We found that chat had a positive influence
+on the relationships of friends and strangers, the presence of
+the media was a large influence on conversations, and
+intermissions did reduce feelings of distraction without
+affecting the amount of chat that occurred.
+VIDEO AND INTERNET TELEVISION
+Live streaming video online extends the reach of
+conventional television broadcasting, by enabling people
+who are not co-located to participate in a shared viewing
+experience. For instance, members of an online political
+group could watch their candidate as part of a community
+event, and discuss the event on community forums. Friends
+separated by distance can chat and “hang out” online while
+watching their favorite shows together. Families can use
+streaming video to keep in touch with one another, sharing
+important events such as birthday parties and weddings.
+Real-time communication may enhance these experiences
+even further, because it contains a level of intimacy unlike
+asynchronous forms of communication [18]. In coming
+together for interaction around a shared experience, people
+signal their mutual interest and trust with one another,
+which in turn creates a sense of unity in the group [1].
+Further, interaction drives liking of others (e.g., [3]), and in
+online communities, interaction with others is a major
+determinant of the extent to which people build
+relationships with one another [15,22]. Attachment
+increases if members have a sense of virtual co-presence, or
+a subjective feeling of being together with others [21] and
+synchronous interaction fosters the formation of
+relationships between strangers [24]. Hence, the
+combination of live streaming video with social interaction
+promises a wide range of benefits for the creation and
+maintenance of ties between people online.
+Until recently, publishing live streaming video on the
+Internet has been costly. Server-based video solutions have
+required significant server and network capacity, are rather
+expensive, and are feasible only for large companies and
+organizations. Peer-to-peer video streaming technologies
+[5] can provide high-quality streaming video at a lower
+cost, by taking advantage of the network resources
+available among viewers. Thus, it is now possible for online
+communities to cost-effectively provide live video and chat
+events for their members. We believe that these
+technologies will change how people experience video,
+transforming a passive viewing experience on a TV into an
+active one on the computer, watching online with a
+community of other viewers.
+It might be argued that video is not meant to be a social, or
+at least, an interactive experience. Previous work suggests
+that people who are alone greatly enjoy media content from
+television, movies, and music sources, and that doing so is
+often used as an escape from everyday cares [9,13].
+However, for others, sharing video experiences could
+enhance their enjoyment of both the video content and one
+another. Brown and Barkhuus [2] studied people’s
+television-watching behaviors and found that one
+motivation for downloading TV shows was to keep up with
+Internet discussion forums. In the Social TV project [17],
+researchers investigated interaction patterns among people
+watching TV together. They found that viewers are adept at
+both following the video content, and communicating with
+each other during the show. Therefore, socializing around
+media is perhaps just as important as the media itself, and
+supporting social interactions during media consumption
+can significantly affect, and we hope enhance, the viewing
+experience.
+Previous work in Interactive Television has focused on
+creating systems that allow people to communicate during
+live television broadcasts. AmigoTV [4] combines voice
+chat with an overlay display on the TV showing avatars of
+other viewers, and allows users to see what their friends are
+watching. Media Center Buddies [20] allows viewers to
+send instant messages and chat with one another while
+watching. Telebuddies [14] encourages social interaction
+both through text chat and by allowing content producers to
+add quiz games and trivia contests to their broadcast.
+Reality IM [6] combines social interaction with additional
+contextual information about a TV program, such as
+advertisements and sports statistics. However, although
+each of these systems enables people to chat with one
+another while watching, their creators have not performed
+systematic evaluations of the effects of chat on the viewing
+experience.
+Distraction in Simultaneous Video and Chat?
+Considerable research shows that people cannot pay close
+attention to verbal information from two sources
+simultaneously, and they cannot fully process material from
+an auditory and a visual source, such as conversation with a
+partner and onscreen dialogue [23,25]. Further, if people
+watch videos or TV as an escape [9], conversing with
+others might interfere with their immersion in the content.
+Geerts [11] compared computer-mediated text and audio
+chat while watching television, and concluded that
+Interactive TV systems need to carefully balance the
+activities of watching and communicating to minimize
+distraction from the television program. Thus, watching live
+video online while chatting with others could end in
+frustration, rather than a positive experience.
+MOVIELENS MOVIE NIGHT
+To explore the issue of chat and video, we conducted an
+initial exploratory study in the MovieLens movie
+recommendation community (http://www.movielens.org).
+We showed MovieLens members a series of feature films
+using the End System Multicast (ESM) software ([5],
+http://esm.cs.cmu.edu/). ESM enabled us to deliver live
+streaming video to participants who lived around the world,
+so everyone who signed up could watch the movies at the
+CHI 2007 Proceedings • Video April 28-May 3, 2007 • San Jose, CA, USA
+878
+same time. ESM also provided an IRC-based chat feature,
+allowing people to chat while watching the movies.
+We recruited fifteen MovieLens members to participate in
+our preliminary study, through a series of email invitations
+and website advertising. Five films were shown, and
+participants tuned into two movies on average. Multiple
+chat groups were formed per showing, and the ten
+assembled chat groups had an average of four people each.
+Chat Usage
+Our primary question in this study was whether or not our
+participants, who were strangers to one another, would chat
+while watching the movie. On one hand, we felt that they
+might talk with one another because they were in a study
+together; on the other, they might become so engrossed in
+the movie that chat would be ignored altogether. We found
+that participants did in fact chat, and the chat groups each
+produced an average of about 190 lines of chat over the
+course of a 2.5 to 3 hour movie. This corresponds to about
+1.1 lines of chat each minute. Thus, while chat occurred at a
+very relaxed pace, participants nonetheless chatted.
+At the end of the study, participants were asked to rate their
+enjoyment of the chat on a 7-point Likert scale. They
+reported moderate enjoyment on average (M = 4.3, SD =
+1.6). As suggested by the large standard deviation, some
+participants greatly enjoyed the chat, and felt that it helped
+their understanding of the video content.
+“It was very fun - it was helpful that someone who
+actually understood the movie could help me understand
+it - very much increased my enjoyment of it.” (ML1)
+“I'm also responding positively to the notion of there
+being a community of people out there sharing my
+experience.” (ML3)
+“For me the chat feature was a big part of what made me
+tune in to the movies … If the chat hadn't been there, I
+think I could just as well watch a movie on the TV, or
+downloaded a movie in advance.” (ML14)
+Others felt that the chat was distracting, and one did not see
+any value to the chat feature at all.
+“I'm not interested in chatting online, especially not
+during watching a movie.” (ML6)
+“[I] disliked that [the chat] was somewhat distracting;
+had there been more chatter it could have become
+annoying.” (ML3)
+“[I] just didn't find it possible to concentrate on movie
+and chat. If I'm watching a movie, I don't want/need other
+stimuli.” (ML2)
+Finally, one participant felt that, with practice, the
+distraction might become less bothersome.
+“[I] don't find it too distracting--I'm taking an online
+class where we have audio and chat going at the same
+time, so I'm getting used to multitasking like this” (ML13)
+These comments about distraction speak directly to the
+research on attentional resources cited above, as well as
+Geerts’ study on chat and distraction in Interactive
+Television [11]. Thus, our preliminary data reinforces the
+existence of this tradeoff — the fun of sharing and
+discussing a video with others, versus the potentially
+negative impact of distraction on perceiving and processing
+the video content. To understand this tradeoff better, and to
+investigate whether it could be mitigated, we carried out a
+controlled experiment.
+CARTOON-WATCHING EXPERIMENT
+Based on our observations in the MovieLens study, we
+formulated three main research questions about the shared
+video experience. First, would chat enhance the media
+experience? Prior research suggests that people love
+interacting when they are engaged in a mutually
+entertaining activity (e.g., [16]), but does this interaction
+enhance the value of the entertainment? Decades of
+research suggest that social interaction increases liking (e.g.
+[3]). Thus, does chat with video increase peoples’ liking for
+one another?
+Second, how would chat affect relationships with strangers
+versus friends? We raised this question out of curiosity
+about video with chat as a way to introduce newcomers to
+one another in online communities. Would watching
+together be an effective mechanism for breaking the ice?
+Third, we wondered if structuring the video experience
+might reduce distraction. Both the video and the chat
+require mental processing of verbal material: one must
+attend to the video to see and hear what goes on, and one
+must attend to the chat to keep track of what others have
+said and to formulate responses. We reasoned that perhaps
+the information lost in multitasking occurs mainly in one
+direction at a time. Processing chat may cause one to miss
+what occurs in the video, but processing video only causes
+one to miss what people are saying when they say it.
+Because text chat has a history log (as we studied it),
+viewers can catch up with the conversation when the
+complexity of the video is low (e.g., when there is no
+dialogue). Alternatively, viewers can wait for periods of
+low complexity or a break, and resume chat during those
+periods. If all viewers are watching at the same time,
+coordinating periods of chat with viewing is not impossible.
+Nonetheless, we speculated that a structured experience
+with break periods designated for conversation might aid
+the coordination of viewing and chat, and reduce
+distraction. Our idea is akin to intermissions in a play, or
+breaks in a sporting event.
+From these arguments, we made the following predictions.
+H1. Chat will enhance the media experience. That is, in
+comparison to watching with others without chat, viewers
+with chat will have more fun; they will rate the content
+better; they will enjoy talking; and they will like the other
+people watching with them better.
+CHI 2007 Proceedings • Video April 28-May 3, 2007 • San Jose, CA, USA
+879
+H1a. Chat will increase liking mainly among strangers,
+because friends already like one another.
+H2. Chat will be distracting while watching a video.
+H2a. As chatting during the video is distracting,
+viewers will take advantage of intermissions as a time
+to chat without being distracted.
+H2b. Intermissions will reduce feelings of distraction.
+We used cartoons in this study because they represent the
+kinds of videos seen on YouTube and Google Video, they
+are a few minutes long, it is easy to insert intermissions
+between them, and we could pick a diverse enough set of
+content to appeal to all of our participants.
+METHOD
+We studied shared viewing and chat in a controlled
+laboratory experiment in which small groups assembled to
+watch a series of cartoons. Participants sat at separate
+computers to simulate the experience of watching videos
+remotely on the Internet. The order of the cartoons was
+randomized between groups.
+Experimental Design
+To test the effect of chat on user experience (H1), we
+compared groups where people were able to chat with one
+another (two Chat conditions) with a control condition
+where groups watched the cartoons without the chance to
+chat with one another (No Chat condition). To test the
+impact of chat on groups of strangers (H1a), we assembled
+groups of strangers and groups of friends for the study.
+To test the effects of structuring the video experience (H3),
+we compared two forms of chat. In the Intermission
+condition, each cartoon was separated by a brief
+intermission, to give participants a period of silence where
+they could chat without a video distraction. In the End
+Break condition, participants were given extra time to
+converse after all of the cartoons had played. In both cases,
+our structuring was entirely voluntary and suggestive;
+participants could chat whenever they wanted.
+This experiment used a 3 X 2 between-groups factorial
+design with Video Structure (No Chat, Intermissions, End
+Break) and Group Composition (Friends, Strangers) as the
+independent variables (Table 1).
+Participants
+The sample was 85 participants in 30 groups. Participants
+were recruited in groups of two to four people (M = 2.8)
+from the psychology experiment directory at CMU. To
+recruit groups of friends, we asked that people interested in
+the experiment find two friends to participate with them. To
+recruit strangers, participants simply signed up in one of the
+time slots we offered. Group size did not differ significantly
+among the experimental conditions (F [3,16] = .6, n.s.).
+The average age of the participants was 24.3 years (SD =
+7.3 years); approximately half were female. Seventy-five
+percent of participants were students, five percent were
+faculty or staff, and the rest were alumni, retired or did not
+list their affiliation. Participants were paid $15 each for
+their participation, which took approximately one hour.
+Overall, watching video was a popular activity for our
+participants. Fifty-six percent of participants reported
+watching videos on YouTube or Google Video, and 61%
+reported watching movies or television more than once a
+week in the past month. Thirty-nine percent of participants
+reported renting movies from vendors like NetFlix and
+Blockbuster.
+Procedure
+Participants were informed that they would watch a series
+of cartoons on the computer, and take a survey at the end.
+Participants were seated in an arrangement such that they
+were visually separated from one another. While
+participants remained in audio range to one another, they
+wore headphones to hear audio from the computer. No
+group chatted aloud to one another, although several
+participants did laugh out loud during the study.
+As this study was conducted using laboratory machines on
+a LAN, we used Windows Media Player to play streaming
+video from a server on the LAN. Everyone watched the
+same content at the same time. We also used the mIRC IRC
+client (http://www.mirc.com/) for chat, and collected chat
+logs using an open-source IRC server, instrumented to log
+timestamps, message senders and the contents of each line
+of chat. A picture of the typical arrangement of a
+participant’s screen is shown in Figure 1. Participants were
+allowed to rearrange the window positions and sizes to their
+liking, and about one-third of participants did this.
+We showed participants seven cartoons. The cartoons came
+from Channel Frederator, a popular online video podcast.
+The cartoons followed themes of education, humor, love,
+character struggles, and a music video. The podcast
+encourages its members to rate their cartoons on a 5-point
+Likert scale, and we chose cartoons that were well liked by
+the community (M = 4.0, range = 3.8 to 4.3). None of our
+participants had previously seen these cartoons before.
+Video Structure
+No Chat Intermissions End Break
+Friends 5 groups 5 groups 5 groups
+Group
+Composition
+Strangers 5 groups 5 groups 5 groups
+Table 1. Experimental design.
+CHI 2007 Proceedings • Video April 28-May 3, 2007 • San Jose, CA, USA
+880
+Each cartoon lasted between three and six minutes. In the
+Intermission condition, one-minute intermissions were
+placed in between each cartoon. In the End Break
+condition, participants were given a six-minute period for
+discussion at the end of the cartoons, keeping the break
+time the same for these conditions.
+In both chat conditions, participants were told that they
+could chat with the other participants at any time during the
+study (cartoons or breaks), about any topic. Participants
+were only told of the availability of the chat feature, not that
+it was a mandatory requirement of their participation. In the
+No Chat condition, participants did not have the chat
+feature and did not receive the breaks.
+Measures
+All participants rated each cartoon immediately after it had
+finished, to avoid difficulties in recall. These ratings were
+made on 5-point Likert scales, representing how much they
+liked each cartoon. All participants also completed a final
+survey consisting of 10 questions about chat, the watching
+experience, and the other people in their group (several
+questions were omitted for participants without chat).
+Exploratory factor analysis revealed that four factors
+accounted for most of the item variance and thus four scales
+were constructed (Table 2).
+RESULTS
+We first briefly present data pertaining to the usage and
+pace of the chat. We then discuss tests of the hypotheses.
+We also describe the conversations that occurred in the
+groups, to give a sense of the experience of watching
+together, from our participants’ perspectives.
+Chat Amount and Pace
+On average, the 20 groups with chat produced an average of
+233 (SD = 174) lines of chat, at a rate of approximately 5
+lines of chat per minute. Not surprisingly, groups of friends
+(M [SD] = 337 [158] lines) chatted more than groups of
+strangers (M [SD] = 129 [123] lines; F [1,15] = 8.5, p =
+.01). Video Structure did not affect the amount of chat
+(intermission M [SD] = 205.1 [161.3] lines, end break M
+[SD] = 261.4 [190.6] lines, F [1,16] = .74, n.s.).
+Chat among friends occurred at a rapid pace, with an
+average message inter-arrival time of 8.1 seconds (SD =
+14.2 sec., median = 5 sec.). In stranger groups, chat
+occurred at about half the rate, with an average message
+inter-arrival time of 15.7 seconds (SD = 37.0 sec., median =
+7 sec.), and this difference was statistically significant (F
+[1,4625] = 7.6, p < .01).
+For strangers, intermissions slowed the pace of chat.
+Stranger groups with intermissions had an average message
+inter-arrival time of 27.7 seconds (SD = 60.5 sec., median =
+11 sec.), and stranger groups with an end break had an
+average message inter-arrival time of 9.9 seconds (SD =
+12.7 sec., median = 6 sec., F [1,4641] = 176.9, p < .001).
+Chat pace in friend groups was not affected by
+intermissions (F [1,4641] = .94, n.s.).
+Effects of Chat on the Media Experience
+Our first hypothesis (H1) was that chat would enhance the
+media experience; people would have more fun watching
+the cartoons together with chat, they would rate the content
+higher, they would enjoy using the chat feature, and they
+would like the other people in their group better. To test this
+hypothesis, we examined cartoon ratings, and the scales
+measuring fun and enjoyment, chat enjoyment, liking, and
+closeness. The analyses discussed are ANOVAs using
+Group Composition (Friends vs. Strangers) and Video
+Structure (No Chat vs. Intermissions vs. End Break) as
+independent variables. Because each group had multiple
+members, we included group as a random effect. In some
+cases, we perform contrasts between groups with chat
+(Intermissions and End Break) and groups without chat.
+Figure 1. Typical arrangement of video and chat windows.
+Participants were allowed to move and resize the windows
+to their individual preference.
+Scale Items Example item α
+Fun and
+enjoyment
+2 “I had fun watching the
+cartoons”
+.93
+Chat
+enjoyment
+3 “I enjoyed chatting with
+other people”
+.89
+Liking of
+others
+4 “I liked them” .81
+Closeness Up to
+3
+“During the study, how
+close did you feel to
+Participant X?”
+.84
+Table 2. Scales used in experiment. Items were rated on a
+5-point Likert scale (strongly disagree to strongly agree).
+CHI 2007 Proceedings • Video April 28-May 3, 2007 • San Jose, CA, USA
+881
+Overall, we found that chat neither enhanced nor detracted
+from the enjoyment of the experience, but it did have
+significantly positive effects on people’s relationships with
+others in the group.
+Cartoon Ratings
+On average, cartoons received a rating of 3.3 out of 5 (5
+highest). Treating the individual cartoon ratings as a scale, a
+principle components analysis revealed three components
+with an Eigenvalue greater than 1: two “poor” cartoons (M
+[SD] = 2.5 [1.1]), three “okay” cartoons (M [SD] = 3.3
+[1.1]), and three “good” cartoons (M [SD] = 3.8 [.7]). The
+correlation of our participants’ ratings and the ratings from
+Channel Frederator was .62. To account for these
+differences, and because cartoon ratings were correlated
+with other aspects of the experience (Table 3), we included
+a factor of cartoon quality, with three levels, in the ANOVA
+as a control variable.
+We found a marginally significant interaction between
+Video Structure and cartoon ratings (F [4,213] = 2.3, p =
+.06) on the cartoon ratings (Figure 2). A contrast between
+the groups with and without chat indicates that groups with
+chat enjoyed poor cartoons more than groups without chat
+(F [1,213] = 4.5, p = .03). Thus, chat can supplement poor
+material by making the experience of watching it more
+enjoyable.
+Fun and Enjoyment
+Fun was significantly correlated with participants’ average
+cartoon ratings (Table 3). However, the ANOVA predicting
+fun from Group Composition (Friends vs. Strangers) and
+Video Structure (Intermissions vs. End Break) showed no
+significant main effects or interactions.
+Video Structure also did not affect enjoyment of chat (F
+[1,37] = .11, n.s.). However, friends enjoyed the chat more
+than strangers (friends M [SD] = 4.4 [.57], strangers M
+[SD] = 4.0 [.67], F [1,34] = 4.0, p = .05).
+Liking and Closeness
+As shown in Figure 3, there was a significant main effect of
+chat on liking. Participants with the chat feature liked their
+other group members more (M [SD] = 4.2 [.7]) than
+participants without the chat feature (M [SD] = 3.5 [.7]), F
+(1,49) = 15.7, p < .001. As expected, friends liked each
+other more (M [SD] = 4.4 [.6]) than strangers (M [SD] =
+3.6 [.8]), F (1,49) = 24.5, p < .001. Friends with chat also
+liked each other more (M [SD] = 4.5 [.54]) than friends
+without chat (M [SD] = 4.0 [.61]), F (1,49) = 5.2, p = .03.
+The ANOVA on closeness (Figure 4) also showed a
+significant main effect of chat. Participants with chat felt
+closer to others in the group (M [SD] = 3.6 [1.8]) than those
+without chat (M [SD] = 2.2 [1.5]), F (1,54) = 21.5, p < .001.
+Further, friend groups felt closer with chat (M [SD] = 4.9
+[1.3]) than without (M [SD]= 3.0 [1.6]), F (1,54) = 21.3, p <
+.001. Stranger groups also felt closer with chat (M [SD] =
+2.1 [.94]) than without chat (M [SD] = 1.3 [.44]), F (1,54) =
+4.0, p = .05. Finally, friends felt closer (M [SD] = 4.3 [1.7])
+than strangers (M [SD] = 1.9 [.90]), F(1,54)=73.7, p < .001.
+Figure 2. Effect of chat on ratings for poor, okay and good
+cartoons.
+Figure 3. Effect of chat on liking of others.
+Rate Fun Enjoy Like Close
+Cartoon
+ratings
+(Rate)
+1.0 .47‡ .23 .26* .24*
+Fun &
+enjoyment
+(Fun)
+1.0 .29* .26* .11
+Chat
+enjoyment
+(Enjoy)
+1.0 .58‡ .39†
+Liking of
+others
+(Like)
+1.0 .63‡
+Closeness
+to others
+(Close)
+1.0
+Table 3. Correlations of the cartoon ratings and scales.
+N = 84 for all scales, except N = 54 for Chat enjoyment.
+*p < .05, †p < .01, ‡p < .001
+CHI 2007 Proceedings • Video April 28-May 3, 2007 • San Jose, CA, USA
+882
+Chat and Distraction
+As in the MovieLens study, participants in this study
+mentioned being distracted by the chat. Intermissions and
+the end break were added to this study in order to give
+people an opportunity to chat without missing video
+content. Participants took advantage of these breaks,
+conducting roughly 33% of their chat during the breaks,
+even through the breaks only accounted for about 10% of
+the time spent in the experiment. However, the majority of
+chat (62%) occurred during the cartoons, which accounted
+for about 70% of the time in the experiment. The remaining
+5% of chat was spoken either before the cartoons began, or
+after they ended. The type of break (Intermission vs. End
+Break) did not influence how much chat occurred during
+the cartoons or the breaks (during the cartoons, F [1,16] =
+.4, n.s.; during the breaks, F [1,16] = .01, n.s.).
+Although the structure of the breaks did not influence when
+participants chatted, it did influence how distracted they
+felt. Participants were asked how distracted they felt from
+the chat feature, on a 7-point Likert scale (1 = not distracted
+at all, 7 = very distracted). Participants with intermissions
+reported feeling less distracted (M [SD] = 3.6 [1.9]) than
+participants with an end break (M [SD] = 4.1 [2.0]). This
+difference is marginally significant, F (1,54) = 3.7, p = .06,
+suggesting that intermissions tended to reduce feelings of
+distraction from the chat. Further, the average distraction of
+End Break groups was significantly correlated with the
+amount of chat that occurred during the cartoons (r = .8, p =
+.006), whereas the average distraction of Intermission
+groups was not correlated with the amount of chat that
+occurred during the cartoons (r = .07, n.s.).
+One explanation for the difference in distraction is that
+groups with intermissions simply chatted less than groups
+with an end break, and thus felt less distracted. However,
+Intermission groups didn’t produce a significantly different
+amount of chat (M [SD] = 205.1 [161.3] lines) as End
+Break groups (M [SD] = 261.4 [190.6] lines), F (1,18) = .5,
+n.s. Further, Intermission groups did not differ significantly
+from End Break groups in the amount of chat during the
+cartoons (intermission M [SD] = 129.5 [117.3] lines, end
+break M [SD] = 161.3 [134.8] lines, F [1,16] = .4, n.s).
+Break Preferences
+As mentioned earlier, introducing intermissions into a
+sequence of cartoon videos is analogous to introducing
+commercials in sports programming during breaks in play.
+While they take advantage of the natural breaks in the
+game, they can fragment the experience, and may frustrate
+viewers who wish the breaks were shorter or nonexistent.
+We asked participants about their opinions of the break
+periods, and which type of break they would prefer. The
+results were overwhelming: 100% of participants with
+intermissions reported preferring intermissions, and 52% of
+participants with an end break reported wanting an
+intermission. Further, there was no difference in break
+preferences between friends and strangers (χ2 = .9, n.s.).
+On the other hand, participants also wanted flexibility for
+when they chatted. Of the 57 participants with chat, the
+majority reported that they preferred to chat throughout the
+entire experience (63%), rather confining their chat to just
+the break periods (23%), just the cartoons (9%), or not
+chatting at all (5%). This finding suggests that people
+would not like enforced chat periods, and their behavior
+confirms it (62% of the lines of chat spoken during the
+experiment were spoken during the cartoons).
+Chat Content
+For both friend and stranger groups, the cartoons were a
+major topic of conversation. Favorite chat topics included
+“the cartoons themselves” (C16), “the music and the quality
+of the drawings” (C22), “the rating” (C23), “how good each
+cartoon was” (C27) and “[the] artistry of videos” (C58).
+Participants also made jokes and talked about their lives.
+For example:
+“We discussed some stuff about our professors by
+comparing them to the characters. One was related to
+[two] professors who are a couple and that was
+hilarious.” (C1)
+“I liked chatting with my friends about our inside jokes.
+It may appear that we don’t like each other, but there is
+so much love between the three of us that it is hard for a
+stranger to imagine.” (C4)
+Stranger groups were able to find common ground with
+each other, and their favorite topics included “information
+about graduate school” (C13), “smoothies at Lulu’s” (C53,
+about a local restaurant) and “rating the cartoons” (C56).
+To follow up on these informal impressions, we conducted
+a detailed coding of the chat logs to understand how much
+participants spoke about different topics. We used the “line
+of chat” as our unit of coding, but as the content in a single
+line was not always enough to determine an adequate code,
+we considered each line of chat in its context.
+Figure 4. Effect of chat on feelings of closeness.
+CHI 2007 Proceedings • Video April 28-May 3, 2007 • San Jose, CA, USA
+883
+We developed our coding scheme iteratively, developing
+codes by reading through the chat logs, coding a subset of
+the chat, and then resolving discrepancies by clarifying the
+definition of the category, or adding or removing
+categories. The reliability check was performed by the first
+author and an independent coder on 12% of the chat lines.
+We achieved a good inter-rater reliability after four
+iterations (Cohen’s Kappa = .78).
+The categories were: the cartoons, evaluations and ratings
+of the cartoons, personal topics, laughter, study chat, and
+greetings & partings. Each line of chat was coded under
+only one of these categories, except for laughter, which
+frequently co-occurred with other chat, and thus was coded
+separately. A breakdown of the amount of chat in each
+coding category is shown in Table 4.
+Cartoon, Personal and Evaluation Chat
+A large majority of the lines of chat, 41.6%, were about the
+cartoons, as well as relations of the cartoons to people’s
+lives. For example, participant C59 said, “this is my
+husband at work on our house,” and participant C2 said,
+“we must ask lisa if this is [what] happened to her home
+today” while watching the cartoon about a plumber.
+Participants also spoke about their personal lives during the
+chats without reference to the cartoons, talking about their
+course of study, the weather, sporting events, roommates,
+and even marriage. About 23% of chat was personal and
+unrelated to the video.
+We performed ANOVAs on the percentages of chat in these
+categories, controlling for the duration of the chat. There
+were no effects of the independent variables on the cartoon
+category, but End Break groups tended to have more
+personal chat (M [SD] = 24.6% [17.0%]) than Intermission
+groups (M [SD] = 11.8% [10.8%]), F (1,16) = 4.0, p = .06.
+About 14% of the chats were about participants’
+evaluations of the cartoons. Strangers chatted about the
+cartoon ratings about twice as much as friends (30% vs.
+15%), but this difference was not statistically significant (F
+[1,16] = 2.6, n.s.).
+Laughter
+Spontaneous laughter occurred frequently. We coded
+laughter by looking for “lol”, “haha”, etc. We also coded
+happy smilies such as :) and :D, as they were often used to
+express positive emotions. In total, 7.4% of the lines of chat
+solely consisted of laughter, and 9.4% of the lines of chat
+contained some form of laughter. Strangers did not differ
+from friends in their laughter (F [1,16] = .83, n.s.).
+Chat Likes and Dislikes
+In the survey, participants were asked what they liked and
+disliked about the chat feature, and several themes emerged.
+Fifty-four participants listed reasons for why they liked
+chat, including: chat was entertaining, it made the
+experience more fun, and enabled them to make jokes
+(33%); chat promoted sharing and discussion, and learning
+other people’s opinions (41%); and chat made boring
+material more fun (9%).
+Fifty-two participants listed reasons for not liking the chat:
+chat was distracting (31%); it was hard to think about chat
+topics, they felt forced to chat, or they were unsure of what
+to say to strangers (13%), or complaints about the user
+interface (8%). Nineteen participants simply wrote
+“nothing”, suggesting they were satisfied with the chat.
+Category Example chat (original form) % chat
+Cartoons “the colors are pale looks like a bad chinese cartoon of the late 80's” (C21)
+“i thought the penguin one had really good music too” (C34)
+“the dots are supposed to represent human activity and thier choas + beauty” (C59)
+41.6
+Evaluations “[this] music is awesome” (C20)
+“hmm so far i actually like the pengiun one the best” (C34)
+“That was a bit gross although it was a bit funny” (C15)
+13.7
+Personal “im doing sociology and urban studies” (C34)
+“it is supposed to rain this evening?” (C59)
+“what's the Catholic deal with seperation...I know divorce is a big no no” (C11)
+22.8
+Study “im so happy we're doing this, this is a bonding experience” (C5)
+“we only have 2 more [cartoons], Im kinda sad about it” (C45).
+12.7
+Laughter “:D”, “haha”, “lol” and many variations thereof
+“haha, happy endings are overrated” (C16)
+7.4 solo
+9.4 mixed
+Greetings &
+partings
+“hi”, “hello”, “yo”, “bye” and many variations thereof 1.8
+Table 4. Examples of chat in each coding category. Lines of chat were coded into one of these categories, except for laughter,
+which included lines of chat either solely consisting of laughter (7.4%), or containing other content (9.4%).
+CHI 2007 Proceedings • Video April 28-May 3, 2007 • San Jose, CA, USA
+884
+DISCUSSION
+We set out to learn about the activity of watching video
+together and to understand the role of communication while
+watching a video. Our first study, in the MovieLens online
+community, showed that strangers would watch video and
+engage in chat with others. For some, chat added a sense of
+community and awareness of others. For others, chat was a
+burden; another source of information to be monitored in
+addition to the video. Understanding this tradeoff and how
+to mitigate it was the focus of our second study.
+Effects of Chat on the Viewing Experience
+For the cartoon study, we made several predictions based
+on our experience with the MovieLens study. The first was
+that chat would enhance the experience of watching
+together (H1): people would have more fun, they would rate
+the content higher, they would enjoy using the chat, and
+they would like the other people watching with them better.
+In turn, we found that while people did enjoy using the
+chat, chat did not have a significant effect on fun;
+participants with and without chat both had fun in the study.
+One possible explanation for this null result is a ceiling
+effect. Because we selected highly rated cartoons from
+Channel Frederator, watching the cartoons was already fun
+for most participants.
+We also found that chat made poor content better (Figure
+2), perhaps best described by a comment made in one of the
+chat groups, “I feel bad....I really am paying more attention
+to the chat than the cartoons...primarily because we are so
+much more entertaining” (C11). Some participants also
+described this effect when they listed benefits of chat.
+We predicted chat would have positive effects on social
+outcomes, primarily among strangers (H1a). With chat,
+both friends and strangers increased their liking and
+closeness to one another with chat. However, our results are
+from between-groups comparisons; thus, we cannot know
+exactly how much chat improved liking and closeness, nor
+can we estimate the duration of these effects.
+Chat, Breaks and Distraction
+Our second hypothesis (H2) predicted that people would be
+distracted while chatting and watching a video, and we
+found that this was the case. However, participants did not
+confine their chat to solely the break periods (H2a), and the
+amount of laughter chat shows that chatting in real-time had
+some benefits. Social laughter is known to increase
+people’s enjoyment and evaluations of material [10] and
+many participants enjoyed making jokes in the chat.
+Intermissions did reduce feelings of distraction (H2b), even
+though they did not influence the extent to which people
+chatted during the cartoons. Overall, intermissions did not
+have a negative impact on participants’ enjoyment of chat,
+and participants overwhelmingly preferred intermissions;
+all participants with intermissions preferred them to an end
+break, and over half of the participants with an end break
+would have preferred intermissions.
+Lessons Learned
+Our research is an initial investigation into the social effects
+of Interactive TV. Overall, our results suggest that chatting
+while watching videos is a fun, engaging activity, enjoyed
+both by friends and strangers. For friends, shared activities
+are often used as a way to cement friendships, because they
+provide something to talk about [8]. For strangers, chatting
+while watching provides an opportunity to form new
+relationships, as the videos provided common ground (65%
+of their chat was about cartoons or evaluations). However,
+the videos alone may not be enough to sustain conversation,
+as some people reported running out of things to say and
+feeling awkward. We speculate that moderated discussions
+may be beneficial for strangers, especially when coupled
+with an end break to reduce distraction.
+Finally, we learned that structuring the video experience
+with intermissions during natural break periods reduces
+feelings of distraction.
+Limitations and Future Work
+Many questions are raised by our studies. First, although we
+have found one approach to reducing feelings of distraction
+from integrating chat and video, there are many others. One
+might use a cleverer user interface design, for example, by
+timing the onset of chat for more ideal times (e.g. during
+non-dialogue parts of the video), by merging the chat into
+the video window, or by using audio chat as in AmigoTV
+[4]. Clutter and other human factors issues would need to
+be addressed.
+Genre seems to play an important role in the shared video
+experience, and it is important to understand how
+techniques for reducing distraction interact with genre. We
+found that intermissions worked well for short cartoons.
+However, many television programs place commercials in
+the midst of the drama, and it is unclear if they would have
+the same effect at reducing distraction, and if interaction
+during these periods would help or harm the experience.
+Finally, our results pertaining to strangers must be taken
+with care. We brought strangers to the laboratory for
+purposes of chatting while watching cartoons, and they did
+just that. Participants in the MovieLens study were also
+strangers to one another, and in that study it was clear that
+for some people, chatting while watching was not an
+activity in which they were interested. Thus, understanding
+their reasons for disinterest, as compared to the enjoyment
+of strangers in the cartoon experiment, are of importance to
+media producers and online community leaders, so they can
+appeal to and engage a wider audience.
+CONCLUSION
+New peer-to-peer video streaming technologies promise to
+fundamentally change how we experience media. No longer
+will the experience be passive, or confined to the social
+boundaries imposed by the physical world. Watching video
+online enables us to actively engage with each other as we
+engage with the video, but active engagement comes at a
+CHI 2007 Proceedings • Video April 28-May 3, 2007 • San Jose, CA, USA
+885
+cost. Attention is a limited resource, and we have shown
+that while chatting and watching simultaneously is fun, and
+has social benefits, it is also distracting. Intermissions can
+help reduce this distraction, although they may not be
+appropriate for all types of content. Therefore, future
+research is needed to gain a better understanding of the
+viewing experience, and understand what factors contribute
+to a successful experience and successful interactions.
+ACKNOWLEDGMENTS
+We would like to thank the ESM and MovieLens teams for
+their support. We would also like to thank our anonymous
+coder for his help in coding the chat transcripts. This work
+was supported by National Science Foundation grants IIS-
+0325049, CNS-0520187, CNS-0085920 and CNS-0435382.
+REFERENCES
+1. Arkin, R. M., and Burger, J. M. Effects of unit relation
+tendencies on interpersonal attraction. Social
+Psychology Quarterly, 1980, 43, 380-391.
+2. Brown, B., Barkhuus, L. The television will be
+revolutionized: effects of PVRs and filesharing on
+television watching. In Proc. of CHI 2006. ACM Press,
+New York, NY, 663-666.
+3. Cartwright, D., and Zander, A. Group cohesiveness:
+Introduction. 1953. In D. Cartwright & A. Zander
+(Eds.), Group dynamics: Research and theory.
+Evanston, IL: Row Peterson.
+4. Coppens, T., Trappeniers, L., Godon, M. AmigoTV:
+towards a social TV experience. In Proc. EuroITV 2004,
+University of Brighton, U.K.
+5. Chu, Y., Ganjam, A., Ng, T. S. E., Rao, S.,
+Sripanidkulchai, K., Zhan, J., Zhang, H. Early
+experience with an Internet broadcast system based on
+overlay multicast. In USENIX Annual Technical
+Conference, 2004.
+6. Chuah, M. Reality instant messaging: injecting a dose of
+reality into online chat. In CHI 2003 Extended
+Abstracts. ACM Press, New York, NY, 926-927.
+7. Czerwinski, M., Cutrell, E., & Horvitz, E. Instant
+messaging and interruption: Influence of task type on
+performance. Proceedings of OZCHI 2000, Sydney,
+Australia, Dec. 4-8.
+8. Deaux, K., & Major, B. (1987). Putting gender into
+context: An interactive model of gender-related
+behavior. Psychological Review, 94, 369-389.
+9. Finn, S. and Gorr, M.B. Social isolation and social
+support as correlates of television viewing motivation.
+Communications Research, 2001, 15, 135-158.
+10.Fuller, R. and Sheehy-Skeffington, A. Effects of group
+laughter on responses to humorous material: A
+replication and extension. Psychological Reports, 1974,
+35 (1, pt. 2), 531-534.
+11.Geerts, D. Comparing voice chat and text chat in a
+communication tool for interactive television. In Proc.
+NordiCHI 2006. ACM Press, New York, NY, 461-464.
+12.Helft, M. Young Internet Producers, Bankrolled, Are
+Seeking Act II. The New York Times (Sept. 25, 2006),
+http://www.nytimes.com/2006/09/25/technology/25digg
+.html
+13.Hills, P., and Argyle, M. Positive moods derived from
+leisure and their relationships to happiness and
+personality. Personality and Individual Differences,
+1998, 25, 523-535.
+14.Luyten, K., Thys, K., Huypens, S., and Connix, K.
+Telebuddies: social stitching with interactive television.
+In CHI 2006 Extended Abstracts. ACM Press, New
+York, NY, 1049-1054.
+15.McKenna, K. Y. A., Green, A. S., & Gleason, M. E. J.
+Relationship formation on the Internet: What's the big
+attraction? Journal of Social Issues, 2002, 58(1), 9-31.
+16.Nardi, B., and Harris, J. Strangers and friends:
+Collaborative play in World of Warcraft. In Proc.
+CSCW 2006. ACM Press, New York, NY, 149-158.
+17.Oehlberg, L., Ducheneaut, N., Thornton, J. D., Moore,
+R. J., Nickell, E. Social TV: Designing for distributed,
+sociable television viewing. In Proc. EuroITV 2006,
+Athens, Greece.
+18.Powazek, D. M. Design for community: The art of
+connecting real people in virtual places. 2002.
+Indianapolis, IN: New Riders Publishing.
+19.Putnam, R. D. Tuning in, tuning out: The strange
+disappearance of social capital in America. PS: Political
+Science and Politics, 1995, 28(4), 664-683.
+20.Regan, T., and Todd, I. Media center buddies: instant
+messaging around a media center. In Proc. NordiCHI
+2004. ACM Press, New York, NY, 141-144.
+21.Slater, M., Sadagic, A., and Schroeder, R. Small-group
+behavior in a virtual and real environment: A
+comparative study. Presence, Teleoperators and Virtual
+Environments, 2000, 9(1), 37-51.
+22.Utz, S. Social identification and interpersonal attraction
+in MUDs. Swiss Journal of Psychology, 2003, 62(2), 91-
+101.
+23.Welford, A. T. Single channel operation in the brain.
+Acta Psychologica, 1967, 27, 5-21.
+24.Weisz, J. D., Erickson, T., and Kellogg, W. A.
+Synchronous broadcast messaging: The use of ICT. In
+Proc. CHI 2006. ACM Press, New York, NY, 1293-
+1302.
+25.Wickens, C. D. Multiple resources and performance
+prediction. Theoretical Issues in Ergonomics Science,
+2002, 3(2), 159-177.

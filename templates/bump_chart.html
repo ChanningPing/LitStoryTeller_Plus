@@ -1,0 +1,45 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="./bumps.css">
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+  <script src="static/js/bump_chart/d3-bumps-chart.js"></script>
+</head>
+
+<body>
+  <div id="bumps-chart">
+    <svg width="100%" preserveAspectRatio="xMidYMin">
+    </svg>
+  </div>
+  <script>
+
+    var fileName='static/data/bump_chart.json';
+    d3.json(fileName, function (error, events) {
+      var gender = "Women";
+      var set = "Town Bumps";
+      var el = document.getElementById('bumps-chart');
+
+      var chart = d3.bumpsChart();
+
+      chart
+        .year({ start: 2013, end: 2016 })
+        .windowWidth(window.document.body.clientWidth)
+        .on("selectYear", (start, end) => console.log(start + '-' + end))
+        .on("highlightCrew", crew => console.log(crew))
+        .on("toggleSelectedCrew", crew => console.log(crew));
+
+      var transformedEvents = events
+        .filter(e => e.gender.toLowerCase() === gender.toLowerCase())
+        .filter(e => e.set === set)
+        .sort((a, b) => a.year - b.year)
+        .map(event => d3.transformData(event));
+
+      var data = d3.joinEvents(transformedEvents, set, gender);
+
+      d3.select(el).datum(data).call(chart);
+    });
+  </script>
+</body>
+
+</html>

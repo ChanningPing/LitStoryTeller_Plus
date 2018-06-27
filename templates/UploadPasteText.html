@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Single Document</title>
+    <style type="text/css">
+        .paste-form{
+            max-width: 80%;
+            padding: 10px 20px;
+            background: #f4f7f8;
+            margin: 10px auto;
+            padding: 20px;
+            background: #f4f7f8;
+            border-radius: 8px;
+            font-family: Georgia, "Times New Roman", Times, serif;
+        }
+        .paste-form fieldset{
+            border: none;
+        }
+        .paste-form legend {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+        .paste-form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        .paste-form input[type="text"],
+        .paste-form textarea,
+        .paste-form select {
+            font-family: Georgia, "Times New Roman", Times, serif;
+            background: rgba(255,255,255,.1);
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            margin: 0;
+            outline: 0;
+            padding: 7px;
+            width: 100%;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            background-color: #e8eeef;
+            color:#8a97a0;
+            -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+            box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+            margin-bottom: 30px;
+
+        }
+        .paste-form input[type="text"]:focus,
+
+        .paste-form textarea:focus,
+        .paste-form select:focus{
+            background: #d2d9dd;
+        }
+        .paste-form select{
+            -webkit-appearance: menulist-button;
+            height:35px;
+        }
+        .paste-form .number {
+            background: #1abc9c;
+            color: #fff;
+            height: 30px;
+            width: 30px;
+            display: inline-block;
+            font-size: 0.8em;
+            margin-right: 4px;
+            line-height: 30px;
+            text-align: center;
+            text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+            border-radius: 15px 15px 15px 0px;
+        }
+
+        .paste-form input[type="submit"],
+        .paste-form input[type="button"]
+        {
+            position: relative;
+            display: block;
+            padding: 19px 39px 18px 39px;
+            color: #FFF;
+            margin: 0 auto;
+            background: #1abc9c;
+            font-size: 18px;
+            text-align: center;
+            font-style: normal;
+            width: 100%;
+            border: 1px solid #16a085;
+            border-width: 1px 1px 3px;
+            margin-bottom: 10px;
+        }
+        .paste-form input[type="submit"]:hover,
+        .paste-form input[type="button"]:hover
+        {
+            background: #109177;
+        }
+        textarea {
+            width: 100%;
+            height: 300px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            resize: none;
+        }
+        h1{
+            font-size: 24px;
+            text-align: center;
+            width: 100%;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="paste-form">
+        <form action="visualizeSingleDoc" target="_blank" method="post">
+            <h1> Paste your document and upload</h1>
+
+            <fieldset>
+                <legend><span class="number">1</span> Title</legend>
+                <input type="text" name="title" placeholder="Paste title of the document here...">
+            </fieldset>
+            <fieldset>
+                <legend><span class="number">2</span> Time of Publication</legend>
+                <input class = 'inline_fields' style="width: 54px;" type="text" name="year" placeholder="YYYY">
+                <input class = 'inline_fields' style="width: 54px;" type="text" name="month" placeholder="MM">
+            </fieldset>
+            <fieldset>
+                <legend><span class="number">3</span> Content</legend>
+                <textarea name="content" placeholder="Paste documnet full text here..."></textarea>
+            </fieldset>
+
+            <input type="submit" value="Upload & Visualize" />
+
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1103 @@
+Biological synthesis of metal nanoparticles by microbes
+abstract
+Available online 10 February 2010
+Keywords:
+Nanotechnology
+Biotechnology
+Biosynthesis
+Nanoparticles
+Microbes
+Green chemistry
+An array of physical, chemical and biological methods have been used to synthesize nanomaterials. In order
+to synthesize noble metal nanoparticles of particular shape and size specific methodologies have been
+formulated. Although ultraviolet irradiation, aerosol technologies, lithography, laser ablation, ultrasonic
+fields, and photochemical reduction techniques have been used successfully to produce nanoparticles, they
+remain expensive and involve the use of hazardous chemicals. Therefore, there is a growing concern to
+develop environment-friendly and sustainable methods. Since the synthesis of nanoparticles of different
+compositions, sizes, shapes and controlled dispersity is an important aspect of nanotechnology new costeffective
+procedures are being developed. Microbial synthesis of nanoparticles is a green chemistry approach
+that interconnects nanotechnology and microbial biotechnology. Biosynthesis of gold, silver, gold–silver
+alloy, selenium, tellurium, platinum, palladium, silica, titania, zirconia, quantum dots, magnetite and uraninite
+nanoparticles by bacteria, actinomycetes, fungi, yeasts and viruses have been reported. However, despite
+the stability, biological nanoparticles are not monodispersed and the rate of synthesis is slow. To overcome
+these problems, several factors such as microbial cultivation methods and the extraction techniques have to
+be optimized and the combinatorial approach such as photobiological methods may be used. Cellular,
+biochemical and molecular mechanisms that mediate the synthesis of biological nanoparticles should be
+studied in detail to increase the rate of synthesis and improve properties of nanoparticles. Owing to the rich
+biodiversity of microbes, their potential as biological materials for nanoparticle synthesis is yet to be fully
+explored. In this review, we present the current status of microbial synthesis and applications of metal
+nanoparticles.
+
+1. Introduction
+In recent years, nanotechnology research is emerging as cuttingedge
+technology interdisciplinary with physics, chemistry, biology,
+material science and medicine. The prefix nano is derived from Greek
+Advances in Colloid and Interface Science 156 (2010) 1–13
+⁎ Corresponding author. Tel.: +91 413 2654430; fax: +91 413 2655255.
+E-mail address: puns2005@gmail.com (N. Sakthivel).
+0001-8686/$ – see front matter © 2010 Elsevier B.V. All rights reserved.
+doi:10.1016/j.cis.2010.02.001
+Contents lists available at ScienceDirect
+Advances in Colloid and Interface Science
+j o u r n a l h om e p a g e : www. e l s ev i e r. c om / l o c a t e / c i s
+word nanos meaning “dwarf” in Greek that refers to things of onebillionth
+(109 m) in size. The primary concept of nanotechnology was
+presented by Richard Feynman in a lecture entitled “There's plenty of
+room at the bottom” at the American Institute of Technology in 1959.
+Nanoparticles are usually 0.1 to 1000 nm in each spatial dimension
+and are commonly synthesized using two strategies: top-down and
+bottom-up [1]. In top-down approach, the bulk materials are
+gradually broken down to nanosized materials whereas in bottomup
+approach, atoms or molecules are assembled to molecular
+structures in nanometer range. Bottom-up approach is commonly
+used for chemical and biological synthesis of nanoparticles.
+Unlike bulk materials, nanoparticles have characteristic physical,
+chemical, electronic, electrical, mechanical, magnetic, thermal, dielectric,
+optical and biological properties [2,3]. Decreasing the dimension of
+nanoparticles has pronounced effect on the physical properties that
+significantly differ from the bulk material. These physical properties are
+caused by their large surface atom, large surface energy, spatial
+confinement and reduced imperfections. Nanoparticles have advantages
+over bulk materials due to their surface plasmon resonance (SPR),
+enhanced Rayleigh scattering and surface enhanced Raman scattering
+(SERS) in metal nanoparticles, quantum size effect in semiconductors
+and supermagnetism in magnetic materials. Therefore, nanoparticles
+are considered as building blocks of the next generation of optoelectronics,
+electronics, and various chemical and biochemical sensors [4,5].
+Optoelectronic, physicochemical and electronic properties of nanoparticles
+are determined by their size, shape and crystallinity. Therefore,
+the synthesis of monodispersed nanoparticles with different size and
+shape has been a challenge in nanotechnology. Although various
+physical and chemical methods are extensively used to produce monodispersed
+nanoparticles, the stability and the use of toxic chemicals is
+the subject of paramount concern. The use of toxic chemicals on the
+surface of nanoparticles and non-polar solvents in the synthesis
+procedure limits their applications in clinical fields. Therefore, development
+of clean, biocompatible, non-toxic and eco-friendly methods for
+nanoparticles synthesis deserves merit. Although biological methods
+are regarded as safe, cost-effective, sustainable and environmentfriendly
+processes, they also have some drawbacks in culturing of
+microbes, which is time-consuming and difficult in providing better
+control over size distribution, shape and crystallinity. The biological
+nanoparticles are also not monodispersible and the rate of production is
+slow. These are the problems that have plagued the biological synthesis
+approaches, but the insights gained from strain selection, optimizing the
+conditions such pH, incubation temperature and time, concentration of
+metal ions, and the amount of biological material has come up to give
+hope in implementation of these approaches in large scale and for
+commercial applications. There are also the possibilities of producing
+genetically engineered microbes that overexpress specific reducing
+agents and thereby, controlling the size and shape of biological
+nanoparticles. The combinatorial approach such as photobiological
+methods as proved in the case of Fusarium oxysporum-mediated silver
+nanoparticles production [6] will help to increase the rate of production.
+While exploring the natural secrets for the synthesis of nanoparticles
+by microbes, which are regarded as potent eco-friendly green
+nanofactories, scientists have discovered magnetite particles by magnetotactic
+bacteria [7,8], siliceous materials by diatoms [9], and gypsum
+and calcium layers by S-layer bacteria [10]. Interactions between metals
+and microbes have been exploited for various biological applications in
+the fields of bioremediation, biomineralization, bioleaching, and
+biocorrosion [11] and the microbial synthesis of nanoparticles has
+been emerged as a promising field of research as nanobiotechnology
+interconnecting biotechnology and nanotechnology.
+2. Biosynthesis of nanoparticles by bacteria
+Microbes produce inorganic materials either intra- or extracellularly
+often in nanoscale dimensions with exquisite morphology. Microbial
+resistance to most toxic heavy metals is due to their chemical detoxi-
+fication as well as due to energy-dependent ion efflux from the cell by
+membrane proteins that function either as ATPase or as chemiosmotic
+cation or proton anti-transporters. Alteration in solubility also plays a
+role in microbial resistance [12,13]. Therefore, microbial systems can
+detoxify the metal ions by either reduction and/or precipitation of
+soluble toxic inorganic ions to insoluble non-toxic metal nanoclusters.
+Microbial detoxification can be made either by extracellular biomineralization,
+biosorption, complexation or precipitation or intracellular
+bioaccumulation. Extracellular production of metal nanoparticles has
+more commercial applications in various fields. Since the polydispersity
+is the major concern, it is important to optimize the conditions for
+monodispersity in a biological process [14]. In case of intracellular
+production, the accumulated particles are of particular dimension and
+with less polydispersity.
+2.1. Intracellular synthesis of nanoparticles by bacteria
+In order to release the intracellularly synthesized nanoparticles,
+additional processing steps such as ultrasound treatment or reaction
+with suitable detergents are required. This can be exploited in the
+recovery of precious metals from mine wastes and metal leachates. Biomatrixed
+metal nanoparticles could also be used as catalysts in various
+chemical reactions [15]. This will help to retain the nanoparticles for
+continuous usage in bioreactors. For some years now, bacterial activity has
+been implicated in deposition of mineral ores. Pedomicrobium-like
+budding bacteria in the Alaskar placer, reported in iron and manganese
+oxide deposition process has now been found to accumulate gold [16].
+Bacillus subtilis 168 reduced water soluble Au+3 ions to Au0 producing
+octahedral morphology inside the cell walls in the dimensions of 5–25 nm
+[17,18]. Interestingly, heterotrophic sulfate-reducing bacterial (SRB)
+enrichment from a gold mine was used to destabilize gold(I)-thiosulfate
+complex (Au(S2O3)2
+3−) to elemental gold (b10 nm) in the bacterial
+envelope releasing H2S as end product of metabolism [19]. In Fe(III)
+reducing bacterium, Geobacter ferrireducens, gold was precipitated
+intracellularly in periplasmic space [20]. Similarly, in anaerobic conditions,
+in the presence of hydrogen gas, iron(III)-reducing mesophilic bacterial
+resting cells, Shewanella algae reduced Au+3 ions at 25 °C with 10–20 nm
+in periplasmic space (pH 7.0) and with 15–200 nm on bacterial surfaces
+(pH 2.8) [21]. As in the case of Gram-negative bacteria that produce
+membrane vesicles like outer membrane proteins, lipopolysaccharides
+and phospholipids to protect itself against toxic chemicals, Plectonema
+boryanum UTEX485, a filamentous cyanobacterium precipitates gold
+nanoparticles in abiotic and cyanobacterial systems between 25 °C and
+200 °C with aqueous Au(S2O3)2
+−3 and AuCl4
+− solution [22,23]. The
+interaction of P. boryanum UTEX485 with Au(S2O3)2
+−3 promoted the
+accumulation in membrane vesicles with 10–25 nm in size in cubic
+morphology, clustering inside the cell with b10 nm and precipitated in
+solution with ∼10–25 nm along with admixed AuS nanoparticles of
+b10 nm. But in the presence of AuCl4
+− precipitation was resulted in
+octahedral gold platelets of 1–10 μm in solution and b10 nm inside the
+bacterial cells [22,23]. Escherichia coli DH5α mediated bioreduction of
+chloroauric acid to Au0 nanoparticles has been reported recently [24]. The
+accumulated particles on the cell surface were mostly spherical with little
+other morphologies of triangles and quasi-hexagons. These cell-bound
+nanoparticles have been reported for promising applications in realizing
+the direct electrochemistry of hemoglobin and other proteins [24].
+Similarly, the bioreduction of trivalent aurum was also reported in
+photosynthetic bacterium, Rhodobacter capsulatus, which showed biosorption
+capacity of 92.43 mg HAuCl4/g dry weight in the logarithmic
+phase of its growth. The carotenoids and NADPH-dependent enzymes
+embedded in plasma membrane and/or secreted extracellularly were
+found to be involved in the biosorption and bioreduction of Au+3 to Au0
+on the plasma membrane and also extracellularly [25].
+Antimicrobial properties of silver nanoparticles have been exploited.
+Silver-based single crystals such as equilateral, triangles and hexagons
+2 K.B. Narayanan, N. Sakthivel / Advances in Colloid and Interface Science 156 (2010) 1–13
+with particle sizes upto 200 nm in periplasmic space of the bacterium
+were produced by Pseudomonas stutzeri AG259, a silver mine bacterium
+(Fig. 1). This bacterium also produced a small number of monoclinic
+crystalline α-form silver sulfide acanthite (Ag2S) crystallite particles
+with the composition of silver and sulfur in the ratio 2:1 [26,27].
+Biosorption and bioreduction of Ag(I) on cell surface was also reported
+in Lactobacillus sp. A09 at 30 °C, pH 4.5 in 24 h [28]. Similarly, dried cells
+of Corynebacterium sp. SH09 produced silver nanoparticles at 60 °C in
+72 h on the cell wall in the size range of 10–15 nm with diamine silver
+complex [Ag(NH3)2]
++ [29]. Normally, silver toxicity has been well
+detoxified by small periplasmic silver-binding proteins, which bind
+silver at the cell surface and by efflux pumps propels the incoming
+metals and protects the cytoplasm from toxicity [30,31]. It has been
+believed that the organic matrix contains silver-binding proteins that
+provide amino acid moieties, which serve as nucleation sites for the
+formation of silver nanoparticles. Silver precipitating peptides (AG3 and
+AG4) were found to have the capability to precipitate silver from
+aqueous solution of silver ions and form face-centered cubic (fcc)
+structured silver crystals [32]. Recently, an airborne Bacillus sp. isolated
+from the atmosphere was also found to reduce Ag+ ions to Ag0
+. This
+bacterium accumulated metallic silver of 5–15 nm in size in the
+periplasmic space of the cell [33]. Some bacteria have been reported
+for the production of more than one nanoparticle and bimetallic alloys.
+Nair and Pradeep [34] found that Lactobacillus sp. in buttermilk
+produced microscopic gold, silver, and gold–silver alloy crystals of
+well-defined morphology within the cell with no disturbance in its
+viability. Gold crystals were found as 20–50 nm in hexagonal and
+triangular shapes and as clusters of N100 nm. Intracellular synthesis of
+gold and silver nanoparticles by B. subtilis [17], sulfate-reducing bacteria
+[19], S. algae [21], P. boryanum [22,23], E. coli [24], R. capsulatus [25],
+Lactobacillus sp. [34] and by P. stutzeri [26,27], Corynebacterium sp. [29],
+Bacillus sp. [33], and Lactobacillus sp. [34] showed different morphologies
+such as cubic, hexagonal, spherical and hexagonal in the size range
+of 5–200 nm (Table 1).
+Stenotrophomonas maltophilia SELTE02, a strain isolated from the
+rhizospheric soil of Astragalus bisulcatus, selenium hyperaccumulator
+legume, showed promising transformation of selenite (SeO3
+−2
+) to
+elemental selenium (Se0
+) accumulating selenium granules either in
+the cell cytoplasm or in the extracellular space [35]. In addition, a
+facultative anaerobic bacterium, Enterobacter cloacea SLD1a-1 [36], a
+purple non-sulfur bacterium, Rhodospirullum rubrum in oxic and
+anoxic condition [37] and Desulfovibrio desulfuricans [38] have also
+been found to bioreduce selenite to selenium both inside and outside
+the cell with various morphologies like spherical, fibrillar and granular
+structure or with small atomic aggregates. E. coli also deposited
+elemental selenium both in periplasmic space and cytoplasm [39,40]
+and P. stutzeri also aerobically reduced selenite to elemental selenium
+[41]. Under aerobic conditions, Hunter and Manter [42] reported a
+bacterial strain Tetrathiobacter kashmirensis, which bioreduced selenite
+to elemental red selenium. A 90-kDa protein present in the
+cell-free extract was believed to be responsible for this bioreduction.
+Recently, Yadav et al. [43] showed that P. aeruginosa SNT1 isolated
+from rhizospheric seleniferous soil also biosynthesized nanostructured
+selenium by biotransforming selenium oxyanions to spherical
+amorphous allotrophic elemental red selenium both intracellularly
+and extracellularly. When growth-decoupled, resting cells of metalion
+reducing bacteria, S. algae was incubated anaerobically in aqueous
+solution of H2PtCl6 at room temperature and neutral pH, it reduced
+PtCl6
+−2 ions within 60 min in the presence of lactate as the electron
+donor to metallic platinum changing the color from pale yellow to
+black (Table 1). Thus discrete platinum nanoparticles of ∼5 nm were
+found to be deposited in periplasmic space between inner and outer
+membrane of S. algae [44] (Fig. 2). Yet another platinum group metal
+nanoparticle was produced by sulfate-reducing bacterium, Desulfovibrio
+desulfuricans NCIMB 8307. This bacterium anaerobically bioreduced
+and biocrystallized palladium (2+) ions to palladium
+nanoparticles on the surface of cells in the presence of exogenous
+electron donor as formate within minutes at neutral pH [45]. De
+Windt et al. [46] also showed that another iron-reducing bacterium,
+S. oneidensis MR-1 in the presence of formate as the electron donor
+reduced Pd(II) to Pd(0) nanoparticles on the cell wall and inside the
+periplasmic space by changing the color of the biomass to black. This
+cell-associated (nano-) bioPd was used as catalyst in the dechlorination
+of polychlorinated biphenyl 21 (2,3,4-chloro biphenyl). Furthermore,
+Mann et al. [47] studied with Aquaspirillum magnetotacticum, a
+microaerophilic bacterium isolated from sediments, produced crystals
+of ordered single-domain magnetite (Fe3O4) particles with morphology
+of octahedral prism of {111} faces truncated by {100} faces.
+Magnetosomes comprises both crystallite and non-crystallite
+magnetic crystals. An ∼3 μm long cell has been found to accumulate
+20 intracellular enveloped magnetite particles of diameter 40–50 nm.
+Marine magnetotactic bacterium MV-1 isolated from sulfide-rich
+sediments of an estuarine salt marsh anaerobically bioreduced nitrous
+oxide and ferric quinate to iron-rich magnetosomes. Each magnetite
+(Fe3O4) particle was parallelepipeds in dimension 40× 40 × 60 nm
+with single magnetic domain [48]. Similarly, a magnetotactic
+bacterium isolated from brackish and marine sulfide-rich water and
+sediments intracellularly deposited single crystals of ferromagnetic
+iron sulfide, greigite (Fe3S4), which was also found to be associated
+with non-magnetic mineral, iron pyrite (FeS2) and aligned in chains.
+Each chain contained approximately 10 nanoparticles with size of
+75 nm. Most of the particles were irregular and some were octahedral
+and cubo-octahedral with cubic symmetry exhibiting strong diffraction
+contrast [49]. Also, Watson et al. [50] reported the synthesis of magnetic
+iron sulfide nanoparticles of few nanometers of 2 nm on its surface by
+sulfate-reducing bacteria. These magnetic nanoparticles were separated
+from the solution by a high-gradient magnetic separation (HGMS) in a
+field of 1 T. In nature, magnetotactic bacteria occur widely in the habitats
+of marine and freshwater sediments. They produce intracellular,
+membrane-bound magnetite [51], greigite [52], and pyrrhotite [53]. In
+magnetotactic bacterium, Magnetospirullum magnetotacticum magnetite
+nanoparticles (Fe3O4) were aligned in a chain parallel to longitudinal
+axis of the cell. The single-domain crystals formed structures such as
+flux-closure rings of in-plane dipoles and folded chains with dominant
+dipolar forces. Each bacterial cell contained approximately 0–45
+nanoparticles with polydispersity. Transmission electron microscopic
+(TEM) analysis revealed the magnetite particles to be cubo-octahedrons
+with irregular faceted shape. The mean equivalent sphere diameter was
+47.1 nm [54]. Lee et al. [55] demonstrated that by manipulating
+magnetotactic bacteria in fluid using microelectromagnets, the assembly
+of magnetic nanoparticles inside the body can be controlled. In M.
+Fig. 1. Crystal topologies by P. stutzeri AG259. (a, b) Triangular, hexagonal, and
+spheroidal Ag-NPs found at different cellular binding sites (reproduced from [27] with
+permission from National Academy of Sciences, U.S.A.).
+K.B. Narayanan, N. Sakthivel / Advances in Colloid and Interface Science 156 (2010) 1–13 3
+Table 1
+List of bacteria that synthesize metal nanoparticles.
+Microorganism Nanoparticle Localization/morphology Size Reference
+Bacterium-intracellular
+Bacillus subtilis 168 Au Octahedral inside cell wall 5–25 nm [17]
+Sulfate-reducing
+bacteria
+Au Cell envelope b10 nm [19]
+Shewanella algae Au Periplasmic space, bacterial envelope 10–20 nm [21]
+15–200 nm
+Plectonema
+boryanum UTEX485
+Au Membrane vesicles/Cubic 10 nm [22,23]
+Escherichia coli DH5α Au Cell surface/Spherical ND [24]
+Rhodobacter
+capsulatus
+Au Plasma membrane ND [25]
+Pseudomonas stutzeri AG259 Ag, Ag2S Periplasmic space b200 nm [26,27]
+Corynebacterium
+sp. SH09
+Ag Cell wall 10–15 nm [29]
+Bacillus sp. Ag Periplasmic space 5–15 nm [33]
+Lactobacillus sp. Au, Ag, Au–Ag Hexagonal/Contour 20–50 nm [34]
+P. aeruginosa SNT1 Se Spherical/Contour ND [43]
+S. algae Pt ND ∼5 nm [44]
+Desulfovibrio
+desulfuricans
+Pd Cell surface ∼50 nm [45]
+NCIMB 8307
+S. oneidensis MR–1 Pd Periplasmic space ND [46]
+Aquaspirillum
+magnetotacticum
+Fe3O4 Octahedral prism 40–50 nm [47]
+Magnetotactic
+bacterium MV-1
+Fe3O4 Cell inside/Parallelepiped 40 × 40 × 60 nm [48]
+Magnetotactic
+bacterium
+Fe3S4, FeS2 Octahedral/Cubo-octahedral 7.5 nm [49]
+Sulfate-reducing
+bacteria
+FeS Cell surface 2 nm [50]
+Magnetospirillum
+magnetotacticum
+Fe3O4 Membrane-bound/Cubo-octohedrons 47.1 nm [54]
+M. magnetotacticum (MS-1) Fe3O4 Inside the cell/Cuboctahedral ∼50 nm [55]
+M. gryphiswaldense Magnetite Membrane-enclosed/Cubo-octahedral elongated hexagonal prismatic 35–120 nm [56]
+Desulfosporosinus sp. UO2 Cell surface 1.5–2.5 nm [58]
+Clostridium
+thermoaceticum
+CdS Cell surface ND [59]
+Klebsiella pneumoniae CdS Cell surface 5–200 nm [60]
+Escherichia coli CdS Spherical, elliptical 2–5 nm [61]
+Desulfobacteriaceae ZnS Spherical 2–5 nm [62]
+Bacterium-extracellular
+Rhodopseudomonas capsulata Au Spherical 10–20 nm
+Triangular nanoplates 50–400 nm [63]
+Spherical nanowires 50–60 nm [64]
+Pseudomonas
+aeruginosa
+Au ND 15–30 nm [65]
+B. megatherium D01 Au Spherical 1.9±0.8 nm [66]
+Aeromonas sp. SH10 Ag ND 6.4 nm [67]
+Enterobacter cloacae, Klebsiella pneumonia, E. coli Ag ND 52.5 nm [68]
+B. licheniformis Ag ND ∼50 nm [69]
+Acetobacter xylinum Ag Cellulose fibre ND [70]
+Morganella sp. Ag Spherical 20± 5 nm [72]
+Sulfurospirillum barnesii, B. selenitireducens,
+Selenihalanaerobacter shriftii
+Se Nanospheres ∼300 nm [73]
+B. selenitireducens Te Nanorods ∼10 nm [74]
+Sulfurospirillum barnesii Te Irregular Nanospheres b50 nm [74]
+Lactobacillus sp. Ti Spherical 40–60 nm [75]
+P. boryanum UTEX 485 Pt Spherical, Chains, Dendritic 30 nm–0.3 µm [76]
+Geobacter metallireducens GS-15 Magnetite ND 10–50 nm [7]
+Thermophilic bacteria TOR-39 Magnetite Octahedral b12 nm [77]
+Thermoanaerobacter ethanolicus (TOR-39) Co, Cr, Ni-substituted- Octahedral ND [78]
+Actinobacter sp. Magnetite Quasi-spherical 10–40 nm [79]
+S. oneidensis MR-1 UO2 Extracellular (UO2-EPS) 1–5 nm [84]
+Klebsiella aerogenes CdS Spherical on cell wall 20–200 nm [85]
+Rhodopseudomonas palustris CdS Spherical 8.01± 0.25 nm [83]
+Gluconoacetobacter xylinus CdS Cellulose fibre 30 nm [87]
+Rhodobacter sphaeroides ZnS Spherical 8 nm [88]
+R. sphaeroides PbS Spherical 10.5± 0.15 nm [86]
+Brevibacterium casei Co3O4 ND 5–7 nm [90]
+ND — Not determined.
+4 K.B. Narayanan, N. Sakthivel / Advances in Colloid and Interface Science 156 (2010) 1–13
+magnetotacticum (MS-1), magnetite (Fe3O4) nanoparticles were found
+assembled into single or multiple chains and anchored inside the body
+enabling the bacteria to passively orient themselves along the
+geomagnetic field lines. Each nanoparticle assembled in phospholipids
+membrane of this bacterium has a cuboctahedral crystal structure with a
+diameter of ∼50 nm with a magnetic moment ∼6× 10−17 A m2
+.
+Accumulation of magnetic iron mineral crystals into highly ordered
+chain-like structures was also evidenced in the magnetosomes of M.
+gryphiswaldense [56] (Fig. 3). Furthermore, a multicellular magnetotactic
+bacterium, Candidatus Magnetoglobus multicellularis, was also found to
+interact with geomagnetic field with the use of biomineralized magnetic
+nanocrystals [57]. Magnetite nanoparticles formed by bacteria such as A.
+magnetotacticum [47], Magnetotactic bacterium MV-1 [48], Sulfatereducing
+bacteria [50], M. magnetotacticum [54], M. magnetotacticum
+(MS-1) [55] and M. gryphiswaldense [56] showed predominant
+morphologies of octahedral prism, parallelepiped, cubo-octahedral and
+hexagonal prism in the size range of 2–120 nm (Table 1).
+The radionuclides in the soluble form imposes a significant threat to
+life by contaminating soils and sediments, to tackle this problem, the
+microbial activity of fixing the soluble form to insoluble can be exploited.
+In that way, Desulfosporosinus sp., a Gram-positive sulfate-reducing
+microbe isolated from sediments when incubated with mobile hexavalent
+uranium U(VI) reduced to tetravalent uranium U(IV) which
+precipitated uraninite. These uraninite (UO2) crystals coated on the cell
+surface of Desulfosporosinus spp. were in the size range of 1.5–2.5 nm
+[58] (Fig. 4). Metal semiconductor nanocrystals have wide spread
+applications in various fields of research particularly in biomedical fields.
+Cunningham and Lundie [59] demonstrated that within 24–48 h after
+the addition of CdCl2 and 0.05% cysteine hydrochloride, Clostridium
+thermoaceticum in late exponential- to early-stationary phase precipitated
+bright yellow CdS crystals on the surfaces of the cells as well as in
+the medium. Here, desulfhydration of cysteine was the source of sulfide
+for CdS precipitation by cysteine desulfhydrase activity and in a similar
+process, Smith et al. [60] produced “bio-semiconductor” CdS nanoparticles
+in the size range of 5–200 nm on the cell surface of Klebsiella
+pneumoniae. These “Bio-CdS” possessed the optical and photoactive
+traits analogous to the chemically synthesized CdS. Few years ago,
+Sweeney et al.[61] showed that E. coli can also intracellularly accumulate
+semiconductor nanocrystals composed of wurtzite crystal in the size
+range of 2–5 nm with spherical and elliptical shapes, when incubated
+with CdCl2 and sodium sulfide. The production of nanocrystal was
+20-fold higher when E. coli cells grown to stationary phase compared to
+late logarithmic phase. It was also found that spherical aggregates of 2- to
+5-nm diameter sphalerite (ZnS) particles were formed within the
+natural biofilms dominated by aerotolerant sulfate-reducing bacteria of
+the family Desulfobacteriaceae [62] (Table 1). Among semiconductor
+nanocrystals, CdS synthesized by C. thermoaceticum [59], Klebsiella
+pneumoniae [60] and E. coli [61] showed spherical and elliptical shape in
+Fig. 2. Dark-field TEM image of S. algae cells showing the presence of platinum
+nanoparticles deposited in periplasmic space (reproduced from [44] with permission
+from Elsevier publishers).
+Fig. 3. TEM of negatively stained cells of M. gryphiswaldense displaying the magnetosome
+chain and isolated magnetosomes. (a). Enlarged view of the magnetosome chain within
+M. gryphiswaldense. The bar denotes 0.1 µm. (b) Isolated magnetosome particles with
+intact magnetosome membranes. Magnetosome membrane is indicated by arrows
+(reproduced from [56] with permission from Institute of Physics publishers).
+Fig. 4. TEM image of flocculated UO2 nanoparticles associated with Desulfosporosinus spp.
+bacteria (arrow). Inset, high-resolution TEM image of isolated particles (reproduced from
+[58] with permission from Nature publishers).
+K.B. Narayanan, N. Sakthivel / Advances in Colloid and Interface Science 156 (2010) 1–13 5
+the size of 2–200 nm and ZnS produced by Desulfobacteriaceae [62]
+exhibited spherical morphology with 2–5 nm in size (Table 1).
+2.2. Extracellular synthesis of nanoparticles by bacteria
+Microbial synthesis of metal nanoparticles depends up on the
+localization of the reductive components of the cell. When the cell wall
+reductive enzymes or soluble secreted enzymes are involved in the
+reductive process of metal ions then it is obvious to find the metal
+nanoparticles extracellularly. The extracellular production of nanoparticles
+has wider applications in optoelectronics, electronics, bioimaging
+and in sensor technology than intracellular accumulation. Rhodopseudomonas
+capsulata, a prokaryotic bacterium was found to reduce Au+3
+to Au0 at room temperature [63]. TEM analysis showed that particles
+were mainly spherical in the size range of 10–20 nm at pH 7.0. But with
+the change in pH of the solution, various shapes and sizes were formed.
+At pH 4.0, triangular nanoparticles also appeared along with spherical
+nanoparticles. These triangular nanoparticles were in the size of
+50–400 nm and spherical particles with a size of 10–50 nm. Optimization
+of conditions for the synthesis of anisotrophic gold nanostructures
+with different concentrations of gold ions were also reported [64]. Here,
+cell-free extract of R. capsulata was added with lower concentration of
+gold ions to produce spherical gold nanoparticles in the size of
+10–20 nm. But highly networked structures of gold nanowires with
+50–60 nm were synthesized with higher concentrations of gold ions.
+Sodium dodecyl sulfate-polyacrylamide gel electrophoretic (SDS-PAGE)
+analysis revealed the involvement of one or more proteins (14–98 kDa)
+in the bioreduction and capping the gold nanoparticles. Among
+hyperthermophilic and mesophilic dissimilatory Fe(III) reducing bacteria
+and archea like Pyrobalaculum islandicum, Thermotoga maritime,
+S. algae, G. sulfurreducens and Pyrococcus furiosus gold was precipitated
+by reducing gold(III) to metallic gold in the presence of hydrogen as
+electron donor. The precipitation occurred extracellularly due to the
+presence of Au(III) reductases near the outer cell surfaces of Fe(III)
+reducers [20]. Husseiny et al. [65] demonstrated that P. aeruginosa
+(ATCC 90271, strain1 and strain2) synthesized gold nanoparticles
+extracellularly with particle size distribution in the order of 40±10 nm,
+25±15 nm and 15± 5 nm respectively. As the particle size has
+increased the color was found to be shifted from pink to blue color
+due to the SPR of gold nanoparticles. Furthermore, the dried powder of
+B. megatherium D01 was also used to reduce gold salts into
+monodispersed gold nanoparticles and dodecanethiol was used as
+capping ligand to stabilize the particles at 26 °C. TEM analysis revealed
+the effect of thiol on the shape, size and dispersity of gold nanoparticles.
+The presence of thiol during biosynthesis indicated the formation of
+small spherical gold nanoparticles with 1.9±0.8 nm in size [66]. In
+analogous, silver nanoparticles were also found to be produced by dried
+cells of Aeromonas sp. SH10, which reduced [Ag(NH3)2]
++ to Ag0 in 4 h
+with an average diameter of Ca. 6.4 nm. These particles were monodispersed
+and uniform in size and remained stable for more than
+6 months without aggregation and precipitation [67]. The culture
+supernatants of Enterobacteriaceae (Klebsiella pneumonia, E. coli and
+Enterobacter cloacae) also rapidly synthesized silver nanoparticles by
+reducing Ag+ to Ag0
+. These particles ranged in size from 28.2 nm to
+122 nm with an average size of 52.5 nm.With the addition of piperitone,
+silver ion reduction was partially inhibited, which showed the
+involvement of nitroreductase enzymes in the reduction process [68].
+Similarly, the culture supernatant of non-pathogenic bacteria, B.
+licheniformis was used for the extracellular synthesis of silver nanoparticles
+of ∼50 nm [69]. Barud et al. [70] also demonstrated the
+formation of homogenous silver containing bacterial cellulose (BC)
+membranes obtained from BC hydrated membranes of Acetobacter
+xylinum cultures soaked on silver ion with triethanolamine (Ag+-TAE)
+solution (Table 1).
+Recently, it has been found that the HIV-1 virus binds exclusively
+to silver nanoparticles whose size is in the range of 1–10 nm [71].
+Morganella sp., a silver-resistant bacterium isolated from the insect
+gut belonging to enterobacteriaceae was reported to produce
+nanoparticles of 20± 5 nm in size with spherical morphology and
+characteristic d-spacing of 2.02 for the [200] plane [72]. Three gene
+homologues namely silE, silP and silS were identified in silver-resistant
+Morganella sp. On basis of partial nucleotide sequencing silE, silP and
+silS homologues were identified as periplasmic silver-binding protein,
+cation-transporting P-type ATPase and two-component membrane
+sensor kinase involved in silver resistance mechanism. Bacteria,
+R. capsulata [63,64], P. aeruginosa [65] and B. megatherium D01 [66]
+extracellularly produced gold nanoparticles with spherical, triangular
+nanoplates and nanowires morphologies in the size range of 1.9–400 nm.
+Interestingly, it was also found that extracellular synthesis of silver
+nanoparticles documented from other bacteria such as Aeromonas sp.
+SH10 [67], E. cloacae, K. pneumonia, E. coli [68], B. licheniformis [69], A.
+xylinum [70] andMorganella sp.[72] showed only sphericalmorphology in
+the size range between 6.4 and 52.5 nm (Table 1).
+Selenium has photo-optical and semiconducting properties that
+have applications in photocopiers and microelectronic circuit devices.
+Few selenite- and selenate-respiring bacteria such as Sulfurospirillum
+barnesii, B. selenitireducens and Selenihalanaerobacter shriftii synthesized
+extracellularly stable uniform nanospheres of diameter ∼300 nm of
+elemental selenium Se0 with monoclinic crystalline structures. These
+bacteria have also produced small amounts of Se0 intracellularly [73].
+Microbial synthesis of elemental selenium (Se0
+) nanospheres resulted
+in unique, complex, compacted nanostructured arrangements of Se
+atoms. These arrangements were resulted due to the dissimilatory
+reductions that were subtly different in different microbes. Another
+metalloid semiconductor, tellurium belonging to chalcogen family has
+been reduced from tellurite to elemental tellurium by two anaerobic
+bacteria, B. selenireducens and Sulfurospirillum barnesii. In case of
+B. selenireducens, initially formed nanorods of ∼10 nm in diameter and
+200 nm in length were clustered together to form larger rosettes of
+∼1000 nm but with S. barnesii small irregularly shaped extracellular
+nanospheres of diameter b50 nm were formed (Table 1). Selected area
+electron diffraction (SAED) and X-ray photoelectron spectroscopy (XPS)
+analyses demonstrated the formation of composition and formation of
+tellurium (Te) in crystalline nature [74]. Titanium nanoparticles of
+spherical aggregates of 40–60 nm were produced extracellularly using
+the culture filtrate of Lactobacillus sp. at room temperature [75]. These
+titanium nanoparticles were lighter in weight and high resistance to
+corrosion and have enormous applications in automobiles, missiles,
+airplanes, submarines, cathode ray tubes and in desalting plants and has
+promising future role in cancer chemotherapy and gene delivery. Unlike
+in abiotic conditions, an ancient Gram-negative cyanobacterium,
+P. boryanum UTEX 485, extracellularly produced Pt(II)-organics and
+metallic platinum nanoparticles at 25–100 °C for up to 28 days, and
+180 °C for 1 day with different morphologies of spherical, bead-like
+chains and dendritic in the size range of 30 nm–0.3 µm. This has been
+shown as first viable alternative method to standard abiotic chemical
+based synthesis of platinum particles [76].
+Magnetite particles have also been produced extracellularly by nonmagnetotactic
+bacterium Geobacter metallireducensGS-15, isolated from
+the sediments of Potomac river, in anaerobic growth conditions [7]. In a
+dissimilatory process, amorphous ferric oxide was reduced to magnetite
+during the reduction of ferric iron as the terminal electron acceptor for
+organic matter oxidation. Thus ultrafine-grained magnetic black
+precipitate crystals were formed in 10–50 nm in size showing
+characteristic diffraction pattern of magnetite [7]. Single-domain
+octahedral magnetite nanoparticles of b12 nm were formed of equal
+length and width at 25 °C outside the bacterial cells by a thermophilic
+fermentative bacterial strain TOR-39. These crystals were similar in sizes
+and shapes produced intracellularly by other magnetotactic bacteria
+[77]. Intriguingly, it has been found that bacteria can act as catalysts by
+extracting some electrochemical energy to live, after which electrons
+were shed to their surroundings at a potential that precipitates
+6 K.B. Narayanan, N. Sakthivel / Advances in Colloid and Interface Science 156 (2010) 1–13
+magnetite. Roh et al. [78] demonstrated bacterially-mediated electrochemical
+process, in which under anaerobic conditions, a fermentative
+Fe(III) reducing bacteria, TOR-39, Thermoanaerobacter ethanolicus in a
+well-buffered medium of pH 6.9–8.5 synthesized octahedral shaped
+transition metals (Co, Cr and Ni)-substituted magnetic crystals by
+electrochemical process at ambient temperature. Furthermore, Bharde
+et al. [79] reported Actinobacter sp., a non-magnetotactic aerobic
+bacterium produced magnetite crystals extracellularly after 24 h.
+Transmission electron microscopic (TEM) analysis showed the magnetite
+crystals of quasi-spherical morphology with 10–40 nm size. The
+induction of two proteins of MW 120 and 70 kDa were involved in the
+biotransformation of aqueous solution of potassium ferricyanide and
+potassium ferrocyanide as iron precursors in to magnetite at room
+temperature in fully aerobic condition. G. metallireducens [7], thermophilic
+bacteria TOR-39 [77] and Actinobacter sp. [79] produced
+magnetite extracellularly with octahedral and quasi-spherical morphologies
+in the size range of 10–50 nm (Table 1).
+Like gold, uranium is soluble in the oxidized form, U(VI), but the
+reduced form of uranium, U(IV), is insoluble. Micrococcus lactilyticus
+cell-free extracts reduced U(VI) to U(IV) [80]. Alteromonas putrefaciens
+grown in the presence of hydrogen as electron donor and U(VI)
+as electron acceptor also reduced U(VI) to U(IV) [81,82]. Similarly,
+Lovley et al. [83] demonstrated that G. metallireducens GS-15, when
+grown anaerobically in the presence of acetate and U(VI) as electron
+donor and electron acceptor reduced soluble uranium U(VI) to
+insoluble U(IV) oxidizing acetate to CO2. Marshall et al. [84] found
+that c-type cytochrome (MtrC) on the outer membrane and
+extracellular of dissimilatory metal-reducing bacterium, S. oneidensis
+MR-1 was involved in the reduction of U(VI) predominantly with
+extracellular polymeric substance as UO2-EPS in cell suspension and
+intracellularly in periplasm (Table 1). Klebsiella aerogenes synthesized
+CdS crystallites of spherical shape as bound to the cell wall and as
+detached electron-dense particles in the dimension of 20- to 200-nm
+when exposed to Cd2+ in the growth medium. Energy dispersive
+X-ray analysis (EDAX) established that cadmium and sulfur in 1:1
+ratio [85]. Bai et al. [86] showed that Rhodopseudomonas palustris, a
+purple non-sulfur, photosynthetic bacterium extracellularly synthesized
+CdS nanocrystals at room temperature. TEM and electron
+diffraction analyses confirmed the spherical distribution of fcc structured
+nanoparticles of size in 8.01± 0.25 nm. The cysteine desulfhydrase
+(C-S lyase) activity was found to be responsible for the
+formation of CdS nanocrystals and also found that bacterial cellulose
+(BC) isolated from the strain Gluconoacetobacter xylinus was also used
+in the synthesis of CdS nanoparticle of 30 nm deposited on BC
+nanofibres [87]. Immobilized Rhodobacter sphaeroides extracellularly
+produced spherical shaped zinc sulfide (ZnS) semiconductor nanoparticles
+of 8 nm in size [88]. In analogous, immobilized purple, nonsulfur
+photosynthetic bacterium, R. sphaeroides produced extracellularly
+fcc structured lead sulfide (PbS) nanoparticles of size 10.5±
+0.15 nm with monodispersed spherical morphology [89] (Fig. 5). All
+these bacteria, K. aerogenes [85], R. palustris [83], G. xylinus [87] and R.
+sphaeroides [88] produced only spherical shaped semiconductor
+nanocrystals in the size range of 8–200 nm in size (Table 1). With
+an immense capability, a metal-tolerant marine bacterium, Brevibacterium
+casei also extracellularly synthesized cubic spinel-structured
+single-crystalline ferromagnetic Co3O4 nanoparticles functionalized
+with proteins in the size range 5–7 nm using aqueous cobalt acetate as
+precursor at room temperature [90] (Table 1).
+3. Biosynthesis of nanoparticles by fungi
+In recent years, fungi such as Fusarium oxysporum [91–100],
+Colletotrichum sp. [101], Trichothecium sp., Trichoderma asperellum,
+T. viride, [102–104], Phaenerochaete chrysosporium [105], F. solani USM
+Fig. 5. Characterization of PbS nanoparticles synthesized by immobilized R. sphaeroides (a) TEM image (b) HRTEM image (c) (200) lattice fringes of denoted area (d) corresponding
+SAED pattern (reproduced from [89] with permission from Elsevier publishers).
+K.B. Narayanan, N. Sakthivel / Advances in Colloid and Interface Science 156 (2010) 1–13 7
+3799 [106], F. semitectum [107], A. fumigatus [108], Coriolus versicolor
+[109], Aspergillus niger [110], Phoma glomerata [111], Penicillium
+brevicompactum [112], Cladosporium cladosporioides [113], Penicillium
+fellutanum [114] and Volvariella volvaceae [115] have been explored
+for nanoparticles synthesis. Fungi are more advantageous compared
+to other microorganisms in many ways. Fungal mycelial mesh can
+withstand flow pressure and agitation and other conditions in
+bioreactors or other chambers compared to plant materials and bacteria.
+These are fastidious to grow and easy to handle and easy for fabrication.
+The extracellular secretions of reductive proteins are more and can be
+easily handled in downstream processing. And also, since the
+nanoparticles precipitated outside the cell is devoid of unnecessary
+cellular components, it can be directly used in various applications.
+3.1. Intracellular synthesis of nanoparticles by fungi
+The nanoparticles formed inside the organism could be smaller
+compared with the size of extracellularly reduced nanoparticles. The
+size limit could have been related to the particles nucleating inside the
+organisms. Mukherjee et al. [116] demonstrated the use of eukaryotic
+microorganisms in the biological synthesis of gold nanoparticles using
+Verticillium sp. (AAT-TS-4). In this study, synthesis of gold nanoparticles
+was reported on the surface and on the cytoplasmic membrane
+of fungal mycelium, which were around 20 nm in diameter. These
+formed nanoparticles have well-defined dimensions and good
+dispersity. On TEM analysis, ultrathin sections of fungal mycelia
+showed the spherical and few triangles and hexagonal nanoparticles
+on cell wall and quasi-hexagonal morphology on cytoplasmic
+membrane. Trichothecium sp. was found to accumulate gold nanoparticles
+intracellularly [102]. In addition, Verticillium luteoalbum and
+isolate 6–3 produced gold nanoparticles in 24 h. When V. luteoalbum
+was incubated at pH 3.0, spherical particles of b10 nm diameter but
+with pH 5.0 spheres and rods were also observed along with
+triangular and hexagonal morphologies [117,118]. Phoma PT35 was
+able to selectively accumulate silver [119] and Phoma sp.3.2883 was,
+in fact, a biosorbent suited for preparing silver nanoparticles [120].
+Verticillium sp. fungal biomass on exposure to aqueous silver nitrate
+solution resulted in the accumulation of silver nanoparticles below
+the fungal cell surface with a negligible amount on the solution
+[92,121]. Recently, Vigneshwaran et al. [122] also showed that the use
+of Aspergillus flavus resulted in the accumulation of silver nanoparticles
+on the surface of its cell wall when incubated with silver nitrate
+solution for 72 h. The average particle size was found to be 8.92 nm
+(Table 2). Intracellular synthesis of gold nanoparticles produced by
+Verticillium sp. [116], Trichothecium sp. [102] and V. luteoalbum
+[117,118] and silver nanoparticles by Verticillium sp. [92,121] and
+Aspergillus flavus [122] showed morphologies of spherical, quasihexagonal
+and rods in the size range of 8.92–25 nm (Table 2).
+Table 2
+List of fungi that synthesize metal nanoparticles.
+Microorganism Nanoparticle Localization/Morphology Size Reference
+Fungus-intracellular
+Verticillium sp. Au Cell wall/spherical, cytoplasmic
+membrane/quasi-hexagonal
+20±8 nm [116]
+Trichothecium sp. Au ND ND [102]
+V. luteoalbum and isolate 6-3 Au Spherical b10 nm [117,118]
+Spheres and rods
+Verticillium sp. Ag Cell wall, cytoplasmic membrane/
+spherical
+25±12 nm [92,121]
+Aspergillus flavus Ag Cell wall 8.92 nm [122]
+Fungus-extracellular
+Fusarium oxysporum Au Spherical, triangular 20–40 nm [91]
+Colletotrichum sp. Au Spherical 20–40 nm [123]
+Trichothecium sp. Au Triangle, hexagonal 5–200 nm [102]
+Trichoderma asperellum Ag ND 13–18 nm [103]
+T. viride Ag Spherical, rod-like 5–40 nm [104]
+F. oxysporum Ag ND 5–50 nm [92]
+Phaenerochaete chrysosporium Ag Pyramidal 5–200 nm [105]
+F. solani USM 3799 Ag Spherical 16.23 nm [106]
+F. semitectum Ag Spherical 10–60 nm [107]
+F. acuminatum EII. & Ev. Ag Spherical 5–40 nm [125]
+A. fumigatus Ag Spherical, triangular 5–25 nm [108]
+Coriolus versicolor Ag Spherical 25–75 nm [109]
+444–491 nm
+Aspergillus niger Ag Spherical 20 nm [110]
+Phoma glomerata Ag Spherical 60–80 nm [111]
+Penicillium brevicompactum Ag ND 58.35± 17.88 nm [112]
+Cladosporium cladosporioides Ag Spherical 10–100 nm [113]
+Penicillium fellutanum Ag Spherical 5–25 nm [114]
+F. oxysporum Au–Ag ND 8–14 nm [93]
+Volvariella volvacea Au, Ag, Au–Ag Spherical, hexagonal 20–150 nm [115]
+F. oxysporum Si Quasi-spherical 5–15 nm [95]
+F. oxysporum Ti Spherical 6–13 nm [95]
+F. oxysporum Zr Quasi-spherical 3–11 nm [94]
+F. oxysporum f. sp. lycopersici Pt Triangle, hexagons, square, rectangles 10–50 nm [98]
+F. oxysporum Magnetite Quasi-spherical 20–50 nm [126]
+Verticillum sp. Magnetite Cubo-octohedral 100–400 nm [126]
+F. oxysporum CdSe Spherical 9–15 nm [99]
+F. oxysporum SrCO3 Needle morphology ND [97]
+F. oxysporum BaTiO3 Quasi-Spherical 4± 1 nm [96]
+F. oxysporum Bi2O3 Quasi-Spherical 5–8 nm [100]
+ND — Not determined.
+8 K.B. Narayanan, N. Sakthivel / Advances in Colloid and Interface Science 156 (2010) 1–13
+3.2. Extracellular synthesis of nanoparticles by fungi
+Synthesis of nanoparticles outside the cell, extracellularly, has
+many applications as it is void of unnecessary adjoining cellular
+components from the cell. Mostly, fungi are regarded as the organisms
+that produce nanoparticles extracellularly because of their enormous
+secretory components, which involve in the reduction and capping of
+nanoparticles. Shankar et al. [123] found an endophytic fungus,
+Colletotrichum sp. isolated from the leaves of geranium plant (Pelargonium
+graveolens), which rapidly reduced gold ions to zero-valent gold
+nanoparticles. It was spherical in shape and polydispersed. These gold
+nanoparticles exhibited a mixture of flat disk and rod-like morphology.
+Glutathiones that bind either through free amine group or cysteine
+residues were reported as capping agents of gold nanoparticles [124].
+TEM analysis showed the size of the gold particles in the range of
+8–40 nm. Similarly, when the fungus Trichothecium sp. was cultured in
+static condition, it reduced Au+3 to form gold nanoparticles [102]. TEM
+images showed the shapes of triangle and hexagonal gold nanoparticles
+with highly polydispersed spheres and rod-like structures. The average
+size of dimension of these gold nanoparticles was found to be 5–200 nm
+and the Scherrer ring pattern was characteristic of fcc gold. The release of
+some loosely bound specific enzymes or proteins by the fungal
+Trichothecium sp. mat in the solution was involved in the synthesis of
+nanoparticles of different morphology (Table 2).
+Bhainsa and D'Souza [108] reported the use of Aspergillus fumigatus
+in the production of monodispersed silver nanoparticles of size 5–25 nm
+with in 10 min when silver nitrate was added. TEM micrograph showed
+the nanoparticles with variable shapes predominantly in spherical and
+with triangular. This is the fastest reduction by a biological process and
+even compared with physical and chemical process. Extracellular
+synthesis of pyramidal morphology of silver nanoparticles was reported
+in white rot fungus P. chrysosporium when challenged with silver
+nitrate. Environmental SEM analysis revealed that silver nanoparticles
+were in the size range of 50–200 nm on the surface of the mycelium.
+This demonstrated the presence of reductase enzymes on the surface of
+the mycelium, which reduced silver ions to silver nanoparticles [105].
+The presence of thick capping agent provided more stabilization to the
+polydispersed silver nanoparticles. Also, Basavaraja et al. [107]
+demonstrated that when culture filtrate of F. semitectum was treated
+with silver ions it reduces to silver nanoparticles with size range of
+10–60 nm with spherical morphology indicating polydispersity. This
+was found to be stable for many weeks. Similarly, Aspergillus niger
+isolated from soil produced spherical silver nanoparticles of size 20 nm
+in diameter. Elemental spectroscopy demonstrated the presence of
+fungal protein for the stabilization of the nanoparticles. The reduction of
+Ag+ ions has occurred by the action of nitrate reductase enzyme and
+quinine in extracellular electron transfer [110]. In addition, F. solani
+(USM-3799), a phytopathogenic fungus of onion produced polydispersed
+spherical silver nanoparticles in the range of 16.23 nm [106]
+(Table 2).
+Extracellular mycosynthesis of silver nanoparticles by F. acuminatum
+EII. and Ev. (USM-3793) isolated from infected ginger was studied by
+Ingle et al. [125]. The nanoparticles produced were in the size range of
+5–40 nm with spherical morphology. The non-pathogenic and biocontrol
+agent, Trichoderma asperellum, also produced silver nanoparticles in
+the size range of 13–18 nm with well-defined morphology and stability
+over several months [103]. These silver ions reduction process followed
+Michaelis–Menten type of mechanisms with pseudo-zero-order kinetics.
+The fungal filtrate of P. glomerata showed the synthesis of spherical
+silver nanoparticles in the range of 60–80 nm when challenged with
+silver nitrate. These nanoparticles also exhibited antibacterial activity
+against E. coli, P. aeruginosa and Staphylococcus aureus [111]. Fungal
+proteins by white rot fungus, C. versicolor, have been used as bioreducing
+and biocapping agents to produce extra- and intracellular silver
+nanoparticles in alkaline condition [109] (Table 2). TEM analysis
+showed the shape of the silver nanoparticles of spherical morphology
+extra- and intracellularly with 25–75 nm and 444–491 nm respectively.
+Very recently, Kathiresan et al. [114] isolated a rhizospheric fungus,
+P. fellutanum, from mangrove root-soil of Rhizophora annamalayana
+Kathir, was found to produce silver nanoparticles in 24 h. TEM studies
+revealed the shape as spherical with size ranging from 5 to 25 nm. The
+partial purification of the fungal protein of 70 kDa was involved in
+nanoparticles formation. Fayaz et al. [104] investigated the antimicrobial
+activity of silver nanoparticles produced by T. viride. Similarly, by
+employing the fungal isolate P. brevicompactum WA2315, the biosynthesis
+of silver nanoparticles was reported from compactin in 72 h [112].
+The synthesized silver particles were in the size range of 23–105 nm. In
+addition, Balaji et al. [113] showed the production of extracellular silver
+nanoparticles by fungus C. cladosporioides. TEM analysis revealed the
+presence of polydispersed and spherical shaped particles. The proteins,
+polysaccharides and organic acids secreted by the fungus were believed
+to have facilitated the formation of different crystal shapes and directed
+the growth into spherical crystals.
+The extract of saprophytic straw mushroom fungus, V. volvacea was
+used to produce silver, gold, gold–silver nanoparticles [115]. Gold
+nanoparticles were found to be of different shapes from triangular
+nanoprisms to spherical and hexagonal were obtained with size ranged
+from 20 to 150 nm whereas silver nanoparticles were spherical with a
+size ∼15 nm and the Au–Ag bimetallic nanoparticles were formed by
+co-reduction of both metal ions. It indicated the core–shell structure
+with thick shell or alloy nanoparticles. As the molar ratio of Au:Ag
+increased, the SPR became more intense and sharper [115]. Intriguingly,
+F. oxysporum f. sp. lycopersici, was found to produce platinum
+nanoparticles intercellularly, on cell wall or membrane and extracellularly
+in the medium in the size range between 10 and 100 nm and with
+varying shapes of triangles, hexagons, squares and rectangles [98] and
+the plant fungus, Verticillum sp., was involved in the process of
+formation of cubo-octahedral iron oxide nanoparticles with
+100–400 nm size in 24 h. These cubo-octahedrals composed of
+10–40 nm sized cubic magnetite particles. The secretion of cationic
+proteins with the molecular weight of 55 kDa and 13 kDa were found to
+be responsible for the hydrolysis of magnetite precursors and/or
+capping the magnetite nanoparticles [126] (Table 2).
+Among fungi, F. oxysporum is the only fungus, which has been
+completely explored and exploited to the maximum for the
+production of various nanoparticles. It extracellularly synthesized
+various nanoparticles like gold, silver, bimetallic Au–Ag alloy, silica,
+titania, zirconia, quantum dots, magnetite, strontianite, Bi2O3 and
+barium titanate. In 2002, Mukherjee et al. [91] reported the synthesis
+of spherical and triangular gold nanoparticles in the size range of
+20–40 nm. FTIR spectrum showed the presence of amide (I) and (II)
+bands from carbonyl and amine stretch vibrations in proteins
+respectively. Electrophoresis revealed the protein of molecular mass
+between 66 kDa and 10 kDa involved in nanoparticles stabilization.
+Zirconia nanoparticles were produced by cationic proteins secreted by
+F. oxysporum when incubated with ZrF6
+−2 anions. The protein of
+molecular weight 24–28 kDa was found to be responsible for the
+formation of zirconia nanoparticles [94]. The particles were overall
+quasi-spherical in shape with size range between 3–11 nm. Senapati
+et al. [92,93] showed the formation of extracellular silver nanoparticles
+and bimetallic gold–silver (Au–Ag) alloy nanoparticles by
+F. oxysporum. Because of their unique electronic and structural
+properties, Au–Ag alloy nanoparticles can be used in biomedical
+applications. Strontianite (SrCO3) crystals of needlelike morphology
+with higher order quasi-linear superstructures with aqueous Sr+ 3
+ions were reported [97]. Since the source of carbonate ions that
+reacted with strontium ions was the fungus itself. This procedure was
+called “total biological synthesis”. Similarly, it also produced silica and
+titania nanoparticles with SiF6
+−2 and TiF6
+−2 anionic complexes, which
+resulted in the synthesis of crystalline titania in room temperature
+and calcinations at 300 °C for crystallization of silica [95]. In addition,
+it also produced ternary oxide, barium titanate nanoparticles (BaTiO3)
+K.B. Narayanan, N. Sakthivel / Advances in Colloid and Interface Science 156 (2010) 1–13 9
+of irregular quasi-spherical morphology with an average size of 4±
+1 nm at room temperature. SAED confirmed the crystalline nature of
+tetragonal phase of nanoparticles, which exhibited a well-defined
+ferroelectric–paraelectric transition at room temperature which can
+be useful in microelectronics [91]. With the mixture of salts K3[Fe
+(CN)6] and K4[Fe(CN)6] after 24 h, it produced crystalline magnetite
+nanoparticles with single-domain characteristics. These particles
+were quasi-spherical in shape with 20–50 nm in size [126]. Similarly,
+upon incubation with CdCl2 and SeCl4, it produced highly luminescent
+water soluble quantum dots (CdSe) with SPR band at 370 nm at room
+temperature [99]. These particles were stable with ∼6–7 ns fluorescence
+half life and showed polydispersed spherical morphology with
+9–15 nm size (Table 2). Although Fusarium species can produce
+various nanoparticles widely, it is not applicable to all Fusarium sp.
+F. moniliforme, which produces reducing components could not be
+able to form silver nanoparticles up on incubation with silver ions
+[127]. Furthermore, the deposition of bismuth was reported on the
+periphery of Yersinia enterocolitica 8081c cultures in log phase growth
+with bismuth subsalicylate (BSS) [128]. Very recently, it was also
+shown that F. oxysporum produced optoelectronic material Bi2O3
+nanocrystals in the size between 5–8 nm extracellularly with quasispherical
+morphology and good tunable properties. When bismuth
+nitrate was added as precursor, the as-synthesized nanocrystals were
+in monoclinic and tetragonal phases [100]. F. oxysporum [91],
+Colletotrichum sp. [123] and Trichothecium sp. [102] produced
+extracellular gold nanoparticles with spherical, triangular and
+hexagonal morphologies with 5–200 nm in size. It was also intriguing
+to observe that the silver nanoparticles produced by T. asperellum
+[103], T. viride [104], F. oxysporum [92], P. chrysosporium [105], F. solani
+[106], F. semitectum [107], F. acuminatum [125], A. fumigatus [108],
+C. versicolor [109], A. niger [110], P. glomerata [111], P. brevicompactum
+[112], C. cladosporioides [113], P. fellutanum [114] and V. volvacea
+[115] were predominantly spherical with pyramidal, rod-like and
+triangular morphologies in the size of 5–200 nm (Table 2).
+Microbes have evolved various measures to respond to heavy metal
+stress via processes such as transport across cell membrane, entrapment
+in extracellular capsules, precipitation, complexation and oxidation–
+reduction reactions [129]. In microbial bioreduction processes, myriads
+of proteins, carbohydrates and biomembranes are involved. The
+enzymatic route of in vitro synthesis of silver hydrosol of 10–25 nm
+using α-NADPH-dependent nitrate reductase (44 kDa) from F. oxysporum
+with capping peptide, phytochelatin was demonstrated recently
+[130]. The mechanistic aspect was explained by Duran et al. [127] that
+apart from enzymes, quinine derivates of napthoquinones and
+anthraquinones also act as redox centres in the reduction of silver
+nanoparticles. A similar finding was also reported in the reduction of
+gold(III) chloride to metallic gold by α-NADPH-dependent sulfite
+reductase of molecular mass of 35.6 kDa and phytochelatin [131]. A
+dimeric hydrogenase enzyme (44.5 and 39.4 kDa) of F. oxysporum that
+showed optimum activity at pH 7.5 and 38 °C passively reduced H2PtCl6
+to platinum nanoparticles was also reported [132] (Table 3). To date,
+only very few reports have been documented on optimization in
+biological process, a 29-kDa “gold shape-directing protein (GSP)”
+present in the extract of green algae Chlorella vulgaris was used in the
+bioreduction and in the synthesis of shape-and size-controlled
+distinctive triangular and hexagonal gold nanoparticles. With increase
+in the concentration of GSP produced gold plates with lateral sizes upto
+micrometers [133]. Such mechanistic components should be unravelled
+for efficient biological processes.
+4. Actinomycete mediated synthesis of nanoparticles
+Actinomycetes though have classified as prokaryotes as they share
+important characteristics of fungi. They are popularly known as ray
+fungi. A novel extremophilic actinomycete, Thermomonospora sp. was
+found to synthesis extracellular monodispersed spherical gold
+nanoparticles at an average size of 8 nm [134]. Fourier transform
+infrared spectroscopic (FTIR) analysis confirmed the presence of
+amide (I) and (II) bands of protein as capping and stabilizing agent on
+the surface of nanoparticles. These particles were stable for more than
+6 months. Electrophoresis analysis showed that the proteins of
+molecular weight ranged from 80 kDa to 10 kDa were involved in
+stabilization of nanoparticles. In contrast, an alkalotolerant actinomycete,
+Rhodococcus sp. intracellularly accumulated gold nanoparticles
+with a dimension of 5–15 nm (Table 4). The available of
+reductases on the cell wall reduced Au+ 3 and accumulated as Au0
+on the cell wall and on cytoplasmic membrane with good dispersity
+[135]. Till date, actinomycetes are regarded as the primary source for
+the synthesizing secondary metabolites like antibiotics in general. But
+these new discoveries would take a lead in screening of further
+actinomycetes in the synthesis of nanomaterials.
+5. Yeast mediated synthesis of nanoparticles
+Among the eukaryotic microorganism, yeast has been exploited
+mainly for the synthesis of semiconductors. Candida glubrata
+produced intracellularly monodispersed spherically shaped peptideTable
+3
+List of biomolecules that mediate the synthesis of metal nanoparticles.
+Microorganism Nanoparticle Biomolecules Reference
+Bacterium-intracellular
+Rhodobacter
+capsulatus
+Au Carotenoids and NADPH—
+dependent enzymes
+[25]
+Tetrathiobacter
+kashmirensis
+Se 90-kDa protein [42]
+Bacterium-extracellular
+Enterobacter cloacae
+Klebsiella
+pneumonia, E. coli
+Ag Nitroreductase [68]
+Fungus-extracellular
+Fusarium oxysporum Au 66- and 10-kDa protein [91]
+F. oxysporum Au α-NADPH-dependent sulfite
+reductase (35.6 kDa) and
+phytochelatin
+[131]
+Colletotrichum sp. Au Glutathiones [123]
+F. oxysporum Ag α-NADPH-dependent nitrate
+reductase (44 kDa) and
+phytochelatin
+[130]
+F. oxysporum Zr 24–28 kDa protein [94]
+F. oxysporum Pt Dimeric hydrogenase (44.5- and
+39.4 kDa)
+[132]
+Aspergillus niger Ag Nitrate reductase [110]
+Penicillium
+brevicompactum
+Ag Compactin [112]
+Verticillium sp. Magnetite 55- and 13-kDa protein [126]
+Actinomycete-extracellular
+Thermomonospora
+sp.
+Au 80–10 kDa protein [134]
+Yeast-intracellular
+Schizosaccharomyces
+cerevisiae
+Au Peptidoglycan reducing sugars [139]
+S. cerevisiae Sb2O3 Membrane-bound quinine or
+membrane-bound/cytosolic pHdependent
+oxidoreductase
+[141]
+Virus
+Tobacco mosaic
+virus (TMV)
+SiO2, CdS,
+PbS and
+Fe2O3
+Glutamate and aspartate on the
+surface
+[154]
+M13 bacteriophage ZnS, CdS Peptides A7 and J140 as fusion
+proteins
+[155,156]
+10 K.B. Narayanan, N. Sakthivel / Advances in Colloid and Interface Science 156 (2010) 1–13
+bound CdS quantum crystallites of 20 Å by neutralizing the toxicity of
+metal ions by forming metal–thiolate complex with phytochelatins
+[136] and Schizosaccharomyces pombe also produced wurtzite-typed
+hexagonal lattice structured CdS nanoparticles in mid-log phase in the
+range of 1–1.5 nm [137]. Kowshik et al. [138] first reported the
+synthesis of fcc structured PbS nanocrystallites exhibiting quantum
+semiconductor properties by yeast, Torulopsis sp. which intracellularly
+produced in the vacuoles with a dimension of 2–5 nm in spherical
+morphology when incubated with Pb2+ exhibiting λmax of 330 nm in
+UV–Vis spectrophotometer. These nanoparticles were used to
+fabricate diode heterojunction with poly (p-phenylenevinylene). In
+addition, baker's yeast, S. cerevisiae was also reported to biosorb and
+reduces Au+ 3 to elemental gold in the peptidoglycan layer of the cell
+wall in situ by the aldehyde group present in reducing sugars [139].
+Similarly, another yeast Pichia jadinii (Candida utilis), intracellularly
+formed gold nanoparticles of spherical, triangular and hexagonal
+morphologies throughout the cell mainly in the cytoplasm of size
+b100 nm in 24 h [117,118]. This tropical marine yeast, Yarrowia
+lipolytica NCIM 3589, also synthesized gold nanoparticles associated
+with cell wall. The reduction of gold ions occurred in pH dependent
+manner. When cells were incubated at pH 2.0, it produced hexagonal
+and triangular gold crystals due to the nucleation on the cell surfaces
+giving rise to golden color in the visible region at 540 nm at pH 7.0 and
+pH 9.0 with pink and purple colors with an average size of ∼15 nm
+[140]. Yet again, S. cerevisiae was also found to produce spherical
+shaped face-centered cubic unit cell antimony oxide (Sb2O3)
+nanoparticles in the size of 2–10 nm at room temperature exhibiting
+semiconductor properties. This was possibly due to the radial
+tautomerization of membrane-bound quinines or by membranebound
+or cytosolic pH-dependent oxidoreductases [141]. Extracellular
+production of silver nanoparticles was reported only in yeast MKY3, a
+silver tolerant strain, which synthesized hexagonal silver nanoparticles
+(2–5 nm) in log phase of growth [142] (Table 4).
+6. Virus mediated biosynthesis of nanoparticles
+Some biological molecules like fatty acids, amino acids, and
+polyphates are used as template in the growth of semiconductor
+nanocrystals. In particular, by changing the ratio of different fatty
+acids (chain lengths), shapes of CdSe, CdS and CdTe nanocrystals can
+be achieved [2,143]. Some other biological methodologies are also
+available for eco-friendly synthesis of inorganic materials. Biological
+materials like DNA [144–146], protein cages [147], biolipid cylinders
+[148,149], viroid capsules [150], bacterial rapidosomes [151], S-layers
+[152] and multicellular superstructures [153] have been used in
+template-mediated synthesis of inorganic nanoparticles and microstructures.
+Interestingly, tobacco mosaic virus (TMV) was used as
+template for the synthesis of iron oxides by oxidative hydrolysis,
+co-crystallization of CdS and PbS, and the synthesis of SiO2 by sol–gel
+condensation. It happened with the help of external groups of
+glutamate and aspartate on the external surface of the virus [154].
+Self-assembled viral capsids of genetically engineered viruses were
+exploited as biological templates for the assembly of quantum dot
+nanowires (Table 4). The peptides like A7 and J140, which have the
+ability to nucleate ZnS and CdS nanocrystals were expressed as pVIII
+fusion proteins into the crystalline capsid of the virus, M13
+bacteriophages. These organized template peptides (A7/J140-pVIIIM13)
+were selected by using a pIII phage display and exposed to
+semiconductor precursor solutions. ZnS nanocrystals assembled on
+the viral capsid were found to be of hexagonal wurtzite of ∼5 nm or
+CdS assembled as nanowires of 3–5 nm. Hybrid nanowires (ZnS–CdS)
+were achieved with a dual peptide virus engineered to express A7 and
+J140 within the same viral capsid [155,156] (Fig. 6).
+7. Conclusions
+Increasing awareness towards green chemistry and biological
+processes has led to a desire to develop an environment-friendly
+approach for the synthesis of non-toxic nanoparticles. Unlike other
+processes in physical and chemical methods, which involve hazardous
+chemicals, microbial biosynthesis of nanoparticles is cost-effective
+and eco-friendly approach. Therefore, microbial synthesis of nanoparticles
+has been emerged as an important branch of nanobiotechnology
+[157,158]. Due to their rich diversity, microbes have the innate
+potential for the synthesis of nanoparticles and they could be
+regarded as potential biofactories for nanoparticles synthesis. However,
+to improve the rate of synthesis and monodispersity of
+nanoparticles, factors such as microbial cultivation methods and
+downstream processing techniques have to be improved and the
+combinatorial approach such as photobiological methods may be
+used. The delineation of specific genes and characterization of
+enzymes that involve in the biosynthesis of nanoparticles is also
+required. Thus, the complete knowledge on the underlying molecular
+mechanisms that mediate the microbial synthesis of nanoparticles is
+mandate to control the size and shape as well as crystallinity of
+nanoparticles. Future research on microbes-mediated biological
+synthesis of nanoparticles with unique optoelectronics, physicochemical
+and electronic properties are of great importance for applications
+in the areas of chemistry, electronics, medicine and agriculture
+[157,158].

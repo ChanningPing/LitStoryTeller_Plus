@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+	text {
+		font-family: "ProximaNova",Helvetica,Arial,sans-serif;
+		font-size: 12px;
+	}
+    text:hover {
+		font-family: "ProximaNova",Helvetica,Arial,sans-serif;
+		font-size: 12px;
+        font-weight: bold;
+        color: #df2929;
+	}
+	rect {
+		fill: none;
+		stroke: #000;
+        pointer-events: all;
+	}
+    /*rect:hover {
+      fill: orangered ;
+    }*/
+
+    .d3-tip {
+      line-height: 1;
+      font-weight: bold;
+      padding: 12px;
+      background: rgba(0, 0, 0,1);
+      color: #fff;
+      border-radius: 2px;
+    }
+
+    /* Creates a small triangle extender for the tooltip */
+    .d3-tip:after {
+      box-sizing: border-box;
+      display: inline;
+      font-size: 10px;
+      width: 100%;
+      line-height: 1;
+      color: rgba(0, 0, 0,1);
+      content: "\25BC";
+      position: absolute;
+      text-align: center;
+    }
+
+    /* Style northward tooltips differently */
+    .d3-tip.n:after {
+      margin: -1px 0 0 0;
+      top: 100%;
+      left: 0;
+    }
+    tspan {
+        display:block;
+        width:300px;
+        word-wrap:break-word;
+    }
+	path {
+		fill: none;
+		stroke-width: 2;
+		stroke: #333;
+	}
+
+	path.light {
+		stroke: #3c6da8;
+	}
+
+	path.dark {
+		stroke: #df2929;
+	}
+
+	.intro text:first-child {
+		fill: #fff;
+	    stroke: #f9f9f9;
+	    stroke-width: 3;
+	}
+
+	.intro text+text {
+	    fill: #333;
+	}
+
+	.intro text+text.dark {
+	    fill: #df2929;
+	}
+
+	.intro text+text.light {
+	    fill: #3c6da8;
+	}
+    a {
+        color: black;
+        text-decoration: none;
+    }
+    pre {
+        white-space: pre;           /* CSS 2.0 */
+        white-space: pre-wrap;      /* CSS 2.1 */
+        white-space: pre-line;      /* CSS 3.0 */
+        white-space: -pre-wrap;     /* Opera 4-6 */
+        white-space: -o-pre-wrap;   /* Opera 7 */
+        white-space: -moz-pre-wrap; /* Mozilla */
+        white-space: -hp-pre-wrap;  /* HP Printers */
+        word-wrap: break-word;      /* IE 5+ */
+        width: 98%;
+        font-family: Arial, Helvetica, sans-serif;
+	}
+    span{
+        display: inline;
+    }
+    a:focus {
+        text-decoration: none;
+        box-shadow: 0 0 0 2px #ffccdd; /* or whatever colour you'd prefer */
+        background-color: #ffccdd;
+    }
+    div.blah {
+        position:fixed;
+        top: 0; /*[wherever you want it]*/
+        left:0; /*[wherever you want it]*/
+}
+    div.scroll {
+        padding-top: 2%;
+        padding-bottom: 2%;
+        padding-left: 2%;
+        margin-bottom: 2%;
+        background-color: #cceeff;
+        height: 300px;
+        width: 100%;
+        overflow-y: scroll;
+}
+
+</style>
+
+<body>
+    <h1>{{ title }}</h1>
+
+    <p id="chart_test"></p>
+
+
+	<script src="static/js/es5-shim.js"></script>
+	<script src="static/js/es6-shim.js"></script>
+    <script src="static/js/d3.min.js"></script>
+    <script src="static/js/d3.tip.js"></script>
+	<script src="static/js/narrative.js"></script>
+	<script src="static/js/fisheye.js"></script>
+
+	<script>
+        console.log('{{ name }}');
+        var fileName='static/data/'+ '{{ name }}' +'.json';
+        d3.json(fileName, function(err, response){
+            var svg, scenes, charactersMap, width, height, sceneWidth;
+
+            // Get the data in the format we need to feed to d3.layout.narrative().scenes
+            scenes = wrangle(response);
+
+            // Some defaults
+            sceneWidth = 15;
+            //width = scenes.length * sceneWidth * 4;
+            width = scenes.length *sceneWidth*7.5;
+            height = 2000;
+            labelSize = [150,15];
+
+
+
+
+
+
+            // The container element (this is the HTML fragment);
+            svg = d3.select("body").append('svg')
+                .attr('id', 'narrative-chart')
+                .attr('width', width)
+                .attr('height', height)
+                .on("click", function(d){
+                    selected_characters = []
+                    console.log('clicked the blank space!');
+                    svg.selectAll('.link')
+                            .style('opacity',1)
+                            //.style("stroke", '#3c6da8')           // colour the line
+                            .style("stroke-width", function(d) { return (d.character.frequency / resize_rate); })
+                            ;
+
+                })
+
+            ;
+            //======================= fisheye
+
+                    var fisheye = d3.fisheye.circular()
+                        .radius(200)
+                        .distortion(2);
+                    var xScale = d3.fisheye.scale(d3.scale.log).domain([1,width]).range([0, width]),
+                        yScale = d3.fisheye.scale(d3.scale.linear).domain([1,height]).range([height, 0])
+                    var xScale = d3.fisheye.scale(d3.scale.identity).domain([225, width]).focus(width/2),
+                        yScale = d3.fisheye.scale(d3.scale.identity).domain([0, height]).focus(height/2);
+            //=======================
+
+
+            // Calculate the actual width of every character label.
+            scenes.forEach(function(scene){
+                scene.characters.forEach(function(character) {
+                    character.width = svg.append('text')
+                        .attr('opacity',0)
+                        .attr('class', 'temp')
+                        .text(character.name)
+                            .node().getComputedTextLength()+10;
+                });
+            });
+
+            // Remove all the temporary labels.
+            svg.selectAll('text.temp').remove();
+
+
+            //receive data from python
+            final_result = {{ final_result|safe }};
+            paragraphs = final_result.all_paragraphs;
+            paragraph_scenes_info =  final_result.paragraph_scenes_info;
+            duration = paragraphs.length;
+            // Do the layout
+            narrative = d3.layout.narrative()
+                .scenes(scenes)
+                .size([width,height])
+                .pathSpace(10)
+                .groupMargin(10)
+                .labelSize([250,15])
+                .scenePadding([5,sceneWidth/2,5,sceneWidth/2])
+                .labelPosition('left')
+                .layout(paragraph_scenes_info, duration);
+
+            // Get the extent so we can re-size the SVG appropriately.
+            svg.attr('height', narrative.extent()[1]+200);
+
+            //prepare to add the all_paragraphs info into the narrative.scenes
+            scenes = narrative.scenes();
+            for(var i=0;i<scenes.length;i++){
+                scenes[i].text = paragraph_scenes_info[i].text;
+                scenes[i].id = "p_"+paragraph_scenes_info[i].x;
+                //console.log('paragraph_info text=' + scenes[i].text );
+                //console.log(scenes[i]);
+            }
+
+            //prepare the tooltip of each scene
+            var tip = d3.tip()
+              .attr('class', 'd3-tip')
+              .offset([-10, 0])
+              .html(function(d) {
+                //return "<strong>Frequency:</strong> <span style='color:red'>" + d.x + "</span>";
+                  //TODO: load sentence data here, rewrite the scene data to include sentences
+                  console.log('object gets here:' + d);
+                  return "<tspan>" + d.text + "</tspan>";
+              })
+            tip.direction('sw');
+            svg.call(tip);
+
+            //prepare drag
+            var paths = narrative.links();//store the path information into global variable, modifiable.
+            max_frequency = 0;
+            for(var i=0;i<paths.length;i++){
+                if(max_frequency < paths[i].character.frequency)  max_frequency = paths[i].character.frequency
+            }
+            resize_rate = max_frequency / 5;
+
+
+            var drag = d3.behavior.drag()
+                    .on('dragstart',function(){
+
+                    })
+                    .on("drag", function(d,i) {
+                        var x = d.x;
+                        var y=d.y + d3.event.dy;
+                        d3.select(this).attr("transform","translate("+x+","+y+")");
+
+                        //change the paths related to the scene
+                        //store the y-coordinate of the characters in this scene
+                        var y_map={};//id map of the characters in this scene
+                        for(var i=0;i<d.appearances.length;i++){
+                                y_map[d.appearances[i].character.id]=d.appearances[i].y;
+                                //console.log('the character id ='+d.characters[i].id+", the y-axis="+d.appearances[i].y);
+                        }
+
+                        //DONE: copy the path coordinates to a global dataset, which is modifiable.
+                        var M;
+                        svg.selectAll('.link')
+                                .filter(function(d1) { return d1.target.scene == d || d1.source.scene == d; })
+                                     .attr('d',function(d1){
+                                         if (d1.target.scene == d ) {
+                                             //source position remains the same
+                                             x0 = (d1.source.scene) ? d1.source.scene.x + d1.source.x : d1.source.x;
+                                             y0 = (d1.source.scene) ? d1.source.scene.y + d1.source.y : d1.source.y;
+                                             //target position changes to the new scene position
+                                             x1 = (d1.target.scene) ? d1.target.scene.x + d1.target.x : d1.target.x;
+                                             //y1 = d3.event.y;
+                                             y1 = y_map[d1.character.id]+y;
+                                             if(d1.target.scene)  d1.target.scene.y =y1-d1.target.y;
+                                             curvature=0.5;
+                                             ci = d3.interpolateNumber(x0, x1);
+                                            cx0 = ci(curvature);
+                                            cy0 = y0;
+                                            cx1 = ci(1-curvature);
+                                            cy1 = y1;
+                                            M = "M" + x0 + "," + y0 +
+                                            "C" + cx0 + "," + cy0 +
+                                            " " + cx1 + "," + cy1 +
+                                            " " + x1 + "," + y1;
+                                             //update the d1.
+                                             return M;
+                                         }else if(d1.source.scene == d  ){
+                                             //only source y changes
+                                             x0 = (d1.source.scene) ? d1.source.scene.x + d1.source.x : d1.source.x;
+                                             y0 =  y_map[d1.character.id]+y;
+                                             y1 = (d1.target.scene) ? d1.target.scene.y + d1.target.y : d1.target.y;
+                                             x1 = (d1.target.scene) ? d1.target.scene.x + d1.target.x : d1.target.x;
+                                             if(d1.source.scene)  d1.source.scene.y =y0 - d1.source.y;
+                                             curvature=0.5;
+                                             ci = d3.interpolateNumber(x0, x1);
+                                            cx0 = ci(curvature);
+                                            cy0 = y0;
+                                            cx1 = ci(1-curvature);
+                                            cy1 = y1;
+                                             M = "M" + x0 + "," + y0 +
+                                            "C" + cx0 + "," + cy0 +
+                                            " " + cx1 + "," + cy1 +
+                                            " " + x1 + "," + y1;
+                                            //path_key = d1.source.character.id+"_"+d1.target.character.id+"_"+d1.character.id;
+                                            // changed_paths[path_key] = M;
+
+                                             return M;
+                                         }
+
+
+                                     } )
+
+                            //get all the charaters in this scene
+                            var id_map={};//id map of the characters in this scene
+                            for(var i=0;i<d.characters.length;i++){
+                                id_map[d.characters[i].id]=1;
+                            }
+                            svg.selectAll('.link')
+                                     .style('opacity',function(d){
+                                         if (d.source.character.id in id_map || d.target.character.id in id_map) {
+                                             return 1;
+                                         }else{
+                                             return 0.2;
+                                         }
+                                     })
+                            d3.event.sourceEvent.stopPropagation();
+                    })
+
+                    .on("dragend",function(d){
+
+                        svg.selectAll('.link')
+                            .style('opacity',1);
+                        d3.event.sourceEvent.stopPropagation();
+
+                    })
+                    ;
+
+
+
+
+
+
+            // Draw the scenes
+            var scenes = svg.selectAll('.scene').data(scenes).enter()
+                .append('g').attr('class', 'scene')
+                    .call(drag)
+                    .attr('transform', function(d){
+                            var x,y;
+                            //x = Math.round(d.x)+0.5;
+                            //y = Math.round(d.y)+0.5;
+                            x = d.x
+                            y = d.y
+                            return 'translate('+[x,y]+')';
+                        })
+                    .on("mousemove", function(d){
+                             if (window.scrollX<100) {
+                                 tip.direction('se');
+                             }else{
+                                 tip.direction('sw');
+                             }
+
+                         })
+                    .on('mouseover', function(d){
+                             // append the y line
+                             tip.show(d);
+                             var indent_x = narrative.introductions()? narrative.introductions()[0].x:0;
+                             d3.select(this)
+                                .append("line")
+                                .attr("class", "x")
+                                .style("stroke", "grey")
+                                .style("stroke-dasharray", "3,3")
+                                .style("opacity", 0.5)
+                                .attr("y1", 0)
+                                .attr("y2", function(d){
+                                    console.log('x='+d.x+",y="+d.y);
+                                    return height-d.y;
+                                })
+                                .attr("x1", 5)
+                                .attr("x2", 5)
+                             ;
+
+                        })
+                        .on('mouseout', function(d){
+                            tip.hide();
+                             d3.select(this)
+                                .select(".x").remove();
+
+                        })
+
+                        //when clicked, highlight all flows throught this scene
+                        .on("click", function(d){
+                            //get all the charaters in this scene
+                            var id_map={};//id map of the characters in this scene
+                            for(var i=0;i<d.characters.length;i++){
+                                id_map[d.characters[i].id]=1;
+                            }
+                            console.log('i want highlight!')
+                            svg.selectAll('.link')
+                                     .style('opacity',function(d){
+                                         if (d.source.character.id in id_map || d.target.character.id in id_map) {
+                                             return 1;
+                                         }else{
+                                             return 0.2;
+                                         }
+                                     })
+                                     //.style("stroke", function(d){
+                                             //if (d.source.character.id in id_map || d.target.character.id in id_map) {
+                                                 //return '#df2929';
+                                             //}else{
+                                                 //return '#3c6da8';
+                                             //}
+                                         //})           // colour the line
+                                    .style("stroke-width", function(d){
+                                             if (d.source.character.id in id_map || d.target.character.id in id_map) {
+                                                 return function(d) { return (d.character.frequency / resize_rate); };
+                                             }else{
+                                                 return function(d) { return (d.character.frequency / resize_rate); };
+                                             }
+                                    })
+
+
+                            document.getElementById(d.id).focus();
+                            //document.querySelector('#'+d.id).scrollIntoView({
+                                //behavior: 'smooth'
+                            //});
+
+                            document.querySelector('#'+d.id).scrollIntoView(true);
+                            document.getElementById("textView_div").scrollTop -= 40;
+                            d3.event.stopPropagation();
+                        })
+                    .append('rect')
+                        .attr('width', sceneWidth)
+                        .attr('height', function(d){
+                            return d.height;
+                        })
+                        .attr('y', 0)
+                        .attr('x', 0)
+                        .attr('rx', 3)
+                        .attr('ry', 3)
+
+                        //.call(drag)
+
+                        ;
+
+
+
+
+
+            // Draw appearances
+             svg.selectAll('.scene').selectAll('.appearance').data(function(d){
+                return d.appearances;
+            }).enter().append('circle')
+                .attr('cx', function(d){
+                    return d.x;
+                })
+                .attr('cy', function(d){
+                    return d.y;
+                })
+                .attr('r', function(){
+                    return 2;
+                })
+                .attr('class', function(d){
+                    return 'appearance ' + d.character.affiliation;
+                })
+                .on("click", function(d){
+                            d3.event.stopPropagation();
+                })
+                ;
+
+            // prepare colors for all characters
+            length = paths.length
+            color = d3.scale.linear().domain([1,length])
+            .interpolate(d3.interpolateHcl)
+            .range([d3.rgb("#007AFF"), d3.rgb('#FFF500')]);
+            for (var i = 0; i < length; i++) {
+                paths[i].character.color = color(i);
+            }
+            // Draw links
+            svg.selectAll('.link').data(paths).enter()
+                .append('path')
+                .attr('class', function(d) {
+                    return 'link ' + d.character.affiliation.toLowerCase();
+                })
+                .attr('d', narrative.link())
+                .on("click", function(d){
+                            d3.event.stopPropagation();
+                })
+                .style("stroke-width", function(d) { return (d.character.frequency / resize_rate); })
+                .style("opacity",1)
+                .style("stroke", function(d){return d.character.color;})
+            ;
+            //prepare highlighted nodes set
+            selected_characters = []
+
+            // Draw intro nodes
+            svg.selectAll('.intro').data(narrative.introductions())
+                .enter().call(function(s){
+                    var g, text;
+
+                    g = s.append('g').attr('class', 'intro')
+                        .on("mouseover", function(d) {
+                           d3.select(this).style("cursor", "pointer")
+                        })
+                        .on("click", function(d){
+                            //test if the character is already selected
+                            if (selected_characters.indexOf(d.character.id) >= 0) {
+                                //do something
+                            }else{
+                                selected_characters.push(d.character.id)
+                            }
+                            console.log('click the intro nodes!');
+                            svg.selectAll('.link')
+                                     .style('opacity',function(d1){
+                                         if (selected_characters.indexOf(d1.source.character.id)>=0 ||
+                                             selected_characters.indexOf(d1.target.character.id)>=0) {
+                                             return 1;
+                                         }else{
+                                             return 0.2;
+                                         }
+                                     })
+                                    //.style("stroke", function(d1){
+                                             //if (selected_characters.indexOf(d1.source.character.id)>=0 ||
+                                             //selected_characters.indexOf(d1.target.character.id)>=0) {
+                                                 //return '#df2929';
+                                             //}else{
+                                                 //return '#3c6da8';
+                                             //}
+                                         //})           // colour the line
+                                    .style("stroke-width", function(d1){
+                                             if (selected_characters.indexOf(d1.source.character.id)>=0 ||
+                                             selected_characters.indexOf(d1.target.character.id)>=0) {
+                                                 return d1.character.frequency / resize_rate;
+                                             }else{
+                                                 return d1.character.frequency /resize_rate ;
+                                             }
+                                    })
+                            d3.event.stopPropagation();
+                        });
+
+                    g.append('rect')
+                        .attr('y', -4)
+                        .attr('x', -4)
+                        .attr('width', 4)
+                        .attr('height', 8);
+
+                    text = g.append('g').attr('class','text');
+
+                    // Apppend two actual 'text' nodes to fake an 'outside' outline.
+                    text.append('text');
+                    text.append('text').attr('class', 'color');
+
+                    g.attr('transform', function(d){
+                            var x,y;
+                            x = Math.round(d.x);
+                            y = Math.round(d.y)>0? Math.round(d.y) : 5;
+                            return 'translate(' + [x,y] + ')';
+                        });
+
+                    g.selectAll('text')
+                        .attr('text-anchor', 'end')
+                        .attr('y', '4px')
+                        .attr('x', '-8px')
+                        .text(function(d){ return d.character.name; });
+
+                    g.select('.color')
+                        .attr('class', function(d){
+                            return 'color ' + d.character.affiliation;
+                        });
+
+                    g.select('rect')
+                        .attr('class', function(d){
+                            return d.character.affiliation;
+                        });
+
+                });
+
+
+            //draw the paragraph/sentence ticks  on x-axis
+            //receive data from TestGistGraph.py
+
+            size = narrative.extent();//width and height of the graph
+            labelSize = narrative.labelSize();
+
+
+            //scale = (size[0]-labelSize[0])/duration;
+            scale = narrative.scale();
+            tick_height = size[1]+10;
+
+
+            console.log('in html, the duration='+duration);
+            console.log('in html, the scale='+scale);
+            console.log('in html, the size[1]='+size[1]+",labelSize[1]="+labelSize[1]+',size[0]='+size[0]+',labelSize[0]='+labelSize[0]);
+
+
+            //prepare the x of paragraph ticks
+            for(var i=0; i<paragraphs.length;i++){
+                paragraphs[i].paragraph_info.x = scale * paragraphs[i].paragraph_info.rank + labelSize[0];
+                paragraphs[i].paragraph_info.y = tick_height;
+
+            }
+
+            //prepare the tooltip of each scene
+            var paragraph_tip = d3.tip()
+              .attr('class', 'd3-sent-tip')
+              .offset([-1, 0])
+              .html(function(d) {
+                  //return "<strong>Frequency:</strong> <span style='color:red'>" + d.x + "</span>";
+                  return  d.paragraph_info.text ;
+              })
+            paragraph_tip.direction('nw');
+            svg.call(paragraph_tip);
+
+
+            //draw the ticks
+            svg.selectAll('.ticks').data(paragraphs).enter()
+                .append('g').attr('class', 'ticks')
+                    .attr('transform', function(d){
+                            var x,y;
+                            x = Math.round(d.paragraph_info.x)+0.5 ;
+                            y = Math.round(d.paragraph_info.y)+0.5;
+
+                            return 'translate('+[x,y]+')';
+                        })
+                    .append('rect')
+                        .attr('width', 10)
+                        .attr('height', 20)
+                        .attr('y', 0)
+                        .attr('x', 0)
+                        .attr('rx', 3)
+                        .attr('ry', 3)
+                    .style('fill', '#fa8072')
+                        .on('mouseover', paragraph_tip.show)
+                        .on('mouseout', paragraph_tip.hide)
+                        .on('click', function(d){
+                            document.getElementById(d.paragraph_info.id).focus();
+                           // document.querySelector('#'+d.paragraph_info.id).scrollIntoView({
+                                //behavior: 'smooth'
+                            //});
+                            document.querySelector('#'+d.paragraph_info.id).scrollIntoView(true);
+                            document.getElementById("textView_div").scrollTop -= 40;
+                        })
+                    ;
+//======================fisheye test
+            /*
+
+
+                svg.on("mousemove", function() {
+                  var mouse = d3.mouse(this);
+                  xScale.distortion(5).focus(mouse[0]);
+                  yScale.distortion(5).focus(mouse[1]);
+
+                  d3.select(this).selectAll('.scene') //change scene rect
+                      .attr('transform', function(d){
+                            console.log('the scene=' + d + ',the x=' + d.x);
+                            return 'translate('+[xScale(d.x),d.y]+')'; //change scene position
+                        })
+                  d3.select(this).selectAll('.ticks') //change comparative sentence ticks
+                       .attr('transform', function(d){
+                            //console.log('the ticks-x ='+d.paragraph_info.x +'after rescale=' + xScale(d.paragraph_info.x))
+                            return 'translate('+[xScale(d.paragraph_info.x),d.paragraph_info.y]+')';
+                        })
+                  d3.select(this).selectAll('.label')//change chapter line and text
+                       .attr('transform', function(d){
+                            //console.log('the chapter-x =' + d.x_original + 'afte rescale= ' + xScale(d.x_original))
+                            return 'translate('+[xScale(d.x_original),0]+')';
+                        })
+                  d3.select(this).selectAll('.intro') //change intro
+                       .attr('transform', function(d){
+                            //console.log('the chapter-x =' + d.x_original + 'afte rescale= ' + xScale(d.x_original))
+                            return 'translate('+[xScale(d.x),d.y]+')';
+                        })
+                  d3.select(this).selectAll('.link').remove();
+                  d3.select(this).selectAll('.link').data(paths).enter()
+                        .append('path')
+                        .attr('class', function(d) {
+                            return 'link ' + d.character.affiliation.toLowerCase();
+                        })
+                        .attr( "d", function(d){
+                           var x0,x1,y0,y1,cx0,cy0,cx1,cy1,ci;
+                           var curvature = 0.5;
+                            // Set path end positions.
+                            x0 = xScale((d.source.scene) ? d.source.scene.x : d.source.x);
+                            y0 = (d.source.scene) ? d.source.scene.y + d.source.y : d.source.y;
+                            x1 = xScale((d.target.scene) ? d.target.scene.x : d.target.x) + d.target.x;
+                            y1 = (d.target.scene) ? d.target.scene.y + d.target.y : d.target.y;
+                            ci = d3.interpolateNumber(x0, x1);
+                            cx0 = ci(curvature);
+                            cy0 = y0;
+                            cx1 = ci(1-curvature);
+                            cy1 = y1;
+                            x1_original = (d.target.scene) ? d.target.scene.x + d.target.x : d.target.x
+                            console.log('the link=' + d + ',the x1=' + x1_original);
+                            return "M" + x0 + "," + y0 +
+                                "C" + cx0 + "," + cy0 +
+                                " " + cx1 + "," + cy1 +
+                                " " + x1 + "," + y1;
+
+                       })
+                      .style("stroke-width", function(d) { return (d.character.frequency / resize_rate); })
+                      //.style("opacity",1)
+                      .style('opacity',function(d1){
+                                         if (selected_characters.indexOf(d1.source.character.id)>=0 ||
+                                             selected_characters.indexOf(d1.target.character.id)>=0) {
+                                             return 1;
+                                         }else{
+                                             return 0.2;
+                                         }
+                                     })
+                      .style("stroke", function(d){return d.character.color;});
+
+
+
+                 });
+*/
+    // ======================
+
+//draw chapter
+            console.log('in html,size[1]='+size[1]+",labelSize[1]="+labelSize[1]+',size[0]='+size[0]+',labelSize[0]='+labelSize[0]);
+
+            chapterLineHeight = 320;
+            console.log('the height of the svg =' + height+', and actual height='+narrative.extent()[1]+200);
+            console.log('chapter height='+chapterLineHeight);
+            console.log('tick height='+tick_height);
+
+
+            chapters = final_result.chapters
+
+
+            for(var i=0;i<chapters.length;i++){
+                //console.log('inital final x='+chapters[i].x);
+                //console.log('final start='+chapterStarts[i]);
+                chapters[i].x_original = scale * chapters[i].paragraph_rank + labelSize[0];
+                console.log('final x='+chapters[i].x_original);
+            }
+            //draw lines based on re-calculated x of chapter lines
+            var label = svg.selectAll(".label").data(chapters).enter()
+                    .append('g').attr('class', 'label')
+                    .attr('transform', function(d){
+                            var x,y;
+                            x = Math.round(d.x_original)+0.5;
+                            y = 0;
+                            return 'translate('+[x,y]+')';
+                        })
+            label.append("svg:line")
+
+                        //.attr("x1", function(d){ return d.x;})
+                         .attr("x1", 0)
+                         .attr("y1", 0)
+                        //.attr("x2", function(d){ return d.x;})
+                         .attr("x2", 0)
+                         .attr("y2", chapterLineHeight)
+                    .style("stroke-width", 0.5)
+                    .style("stroke", "grey")
+                    .style("fill", "none");
+
+            label.append("text")
+
+                 //.attr("x", function(d){ return d.x;})
+                 //.attr("y", chapterLineHeight)
+                 .style("fill", "grey")
+                 //.attr("dy", ".35em")
+                 //.attr("transform", "rotate(315)")
+                 //.attr("dy", ".35em")           // set offset y position
+                 .attr("text-anchor", "end") // set anchor y justification
+                    .attr("x",0)
+                    .attr("y",chapterLineHeight)
+                 .attr("transform", function(d){
+                     //return "translate(" + d.x + "," + chapterLineHeight+") rotate(-30)";
+                     return "translate(" + d.x + "," + 0+") rotate(-30)";
+
+                  })
+                 //.attr("transform", "rotate(5)")
+                 .text(function(d){return d.text;});
+
+
+
+
+
+
+
+
+
+
+
+
+//======================fisheye test
+
+// ======================
+
+
+
+        });
+
+
+
+
+
+
+
+        function wrangle(data) {
+
+            var charactersMap = {};
+
+            return data.scenes.map(function(scene){
+                return {characters: scene.map(function(id){
+                    return characterById(id);
+                }).filter(function(d) { return (d); })};
+            });
+
+            // Helper to get characters by ID from the raw data
+            function characterById(id) {
+                charactersMap = charactersMap || {};
+                charactersMap[id] = charactersMap[id] || data.characters.find(function(character){
+                    return character.id === id;
+                });
+                return charactersMap[id];
+            }
+
+        }
+
+    </script>
+
+</form>
+</body>
+</html>
